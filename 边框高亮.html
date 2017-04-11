@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://sandbox.runjs.cn/show/9ndenq7q -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>边框高亮动画</title>
+</head>
+<body>
+<style>html, body {
+    margin: 0;
+    padding: 0;
+    background: #101010;
+    width: 100%;
+    height: 100%;
+}
+
+.bb {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #666666;
+    border: 1px solid #5EF75E;
+
+    margin: 0 auto; /*水平居中*/
+    top: 50%; /*偏移*/
+    margin-top: -100px;
+}
+
+.bb:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0px;
+    left: 0px;
+    border: 2px solid #00FF00;
+    z-index: 10;
+    box-sizing: border-box;
+    -webkit-animation: clipAni 4s infinite linear;
+
+}
+
+@keyframes clipAni {
+    0%, 100% {
+        clip: rect(0px, 2px, 2px, 0px);
+    }
+    25% {
+        clip: rect(0px, 200px, 2px, 198px);
+    }
+    50% {
+        clip: rect(198px, 200px, 200px, 198px);
+    }
+    75% {
+        clip: rect(198px, 2px, 200px, 0px);
+    }
+}</style>
+
+
+<div class="bb"></div>
+
+</body>
+</html>

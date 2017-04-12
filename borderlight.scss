@@ -1,0 +1,80 @@
+//$size:2px;
+
+@mixin borderLight($size:6px,$border-width:1px,$color:#00FF00) {
+  position: relative;
+  border-width: $border-width;
+  //width: $w;
+  //height: $h;
+  &:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: $size;
+    height: $size;
+    border: $size solid $color;
+    z-index: 10;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 4px $color;
+    -webkit-animation: borlight 4s infinite linear;
+  }
+//自定义圆点大小
+  @keyframes blight {
+    0%, 100% {
+      top: calc(-#{$size}/2 - #{$border-width}*2);
+      left: calc(-#{$size}/2 - #{$border-width}*2);
+    }
+    25% {
+      top: calc(-#{$size}/2 - #{$border-width}*2);
+      left: calc(100% - #{$size} / 2 - #{$border-width}*2);
+    }
+    50% {
+      top: calc(100% - #{$size} / 2 - #{$border-width}*2);
+      left: calc(100% - #{$size} / 2 - #{$border-width}*2);
+    }
+    75% {
+      top: calc(100% - #{$size} / 2 - #{$border-width}*2);
+      left: calc(-#{$size}/2 - #{$border-width}*2);
+    }
+  }
+  //默认圆点大小
+  @keyframes borlight {
+    0%, 100% {
+      top:0;
+      left:0;
+    }
+    25% {
+      top:0;
+      left:100%;
+    }
+    50% {
+      top:100%;
+      left:100%;
+    }
+    75% {
+      top:100%;
+      left:0;
+    }
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+.bl {
+  background: #666666;
+  border: 1px solid #5EF75E;
+  margin: 0 auto;
+  top: 50%;
+  margin-top: -100px;
+  width: 200px;
+  height: 200px;
+  @include borderLight(0px);
+}
+
+

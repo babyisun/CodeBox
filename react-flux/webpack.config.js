@@ -9,18 +9,18 @@ var getEntry = function () {
     //console.log(jsPath);
     var dirs = fs.readdirSync(jsPath);
     var matchs = [],
-        files = {},
-        all = [];
+        files = {};
+        //all = [];
     dirs.forEach(function (item) {
         matchs = item.match(/(.+)\.js$/);
         var _path = '';
         if (matchs) {
             _path = path.resolve("src" + pagejs, item);
             files[matchs[1]] = _path;
-            all.push(_path);
+            //all.push(_path);
         }
     });
-    //files["common"] = lib;
+    files["common"] = ['react','react-dom','react-router'];
     return files;
 }
 
@@ -44,7 +44,7 @@ var config = {
         filename: "[name].js"
     },
     plugins: [
-        //new IgnorePlugin(/\.\/jquery/),
+        new IgnorePlugin(/\.\/react.js$/)
         // new CommonsChunkPlugin({
         //     filename: "common.js",
         //     name: "common"

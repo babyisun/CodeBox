@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Route, Link} from 'react-router-dom'
+import {BrowserRouter, HashRouter,Route, Link} from 'react-router-dom';
 // import {createBrowserHistory} from 'history';
 // const history = createBrowserHistory();
 import {createHashHistory} from 'history';
@@ -23,15 +23,15 @@ class Login extends React.Component {
 }*/
 
 
-ReactDOM.render(<BrowserRouter history={history}>
+ReactDOM.render(<HashRouter history={history}>
         <div>
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/login">login</Link></li>
             </ul>
-            <Route path="/" component={Home}/>
-            <Route path="/login" component={Login}/>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/login" component={Login}/>
         </div>
-    </BrowserRouter>,
+    </HashRouter>,
     document.getElementById('page')
 );

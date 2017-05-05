@@ -1,0 +1,17 @@
+{
+  "css/component/Login.css": "css/component/Login-b864aca6fd.css",
+  "css/component/base.css": "css/component/base-48e95e0a1e.css",
+  "css/core/color.css": "css/core/color-d41d8cd98f.css",
+  "css/fonts/demo.css": "css/fonts/demo-a3383ab8e8.css",
+  "css/fonts/iconfont.css": "css/fonts/iconfont-4850f57727.css",
+  "css/fonts/iconfont.js": "css/fonts/iconfont-4f53702271.js",
+  "css/lib/bootstrap.css": "css/lib/bootstrap-cd5e784bc1.css",
+  "css/lib/daterangepicker.css": "css/lib/daterangepicker-9733401e1a.css",
+  "css/page/index.css": "css/page/index-85719a0ae6.css",
+  "css/plugin/animate.css": "css/plugin/animate-90f3c6e723.css",
+  "css/plugin/animate.min.css": "css/plugin/animate-5ebeacc622.min.css",
+  "css/plugin/fileModal.css": "css/plugin/fileModal-5375c5ec35.css",
+  "js/page/mazda.js": "js/page/mazda-588b2de7b9.js",
+  "js/plugin/fileupload.js": "js/plugin/fileupload-efe55a5a98.js",
+  "js/plugin/webuploader.min.js": "js/plugin/webuploader-46af8f9ee4.min.js"
+}

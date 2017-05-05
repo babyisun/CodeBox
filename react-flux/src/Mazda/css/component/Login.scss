@@ -1,0 +1,205 @@
+@import '../core/color.scss';
+
+body {
+  position: relative;
+  /*background: $body-bg url(../../images/body_bg.jpg) center top / cover no-repeat;*/
+  color: $base-color;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+}
+.login-container{
+  .body-bg{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:url(../../images/body_bg.jpg) center center no-repeat;
+    background-size:100%;
+    -ms-behavior: url(./backgroundsize.min.htc);
+    behavior: url(./backgroundsize.min.htc);
+    z-index:0;
+  }
+  .company-name{
+    width:92px;
+    height:19px;
+    background:url(../../images/mazada.png) 0 0 no-repeat;
+    position:absolute;
+    right:20px;
+    top:20px;
+    z-index:1;
+  }
+  .zoomzoom{
+    width:157px;
+    height:12px;
+    background:url(../../images/zoom.png) 0 0 no-repeat;
+    position:absolute;
+    left:20px;
+    bottom:24px;
+    z-index:1;
+  }
+  .top-div{
+    width:100%;
+    overflow:hidden;
+    position:relative;
+    z-index:2;
+    .logo{
+      width:79px;
+      height:70px;
+      float:left;
+      margin-left:20px;
+      margin-top:20px;
+      background: url(../../images/logo_m.png) 0 0 no-repeat;
+    }
+    .theme{
+      float:left;
+      height:14px;
+      line-height:14px;
+      margin:50px 0 0 34px;
+      display:inline-block;
+      font-family:'宋体';
+      font-size:14px;
+      font-weight:700;
+      color:$login-theme-color;
+      em{
+        padding-left:12px;
+        font-style:normal;
+      }
+      /*background: url(../../images/intro.png) 0 0 no-repeat;*/
+    }
+  }
+  .login-bg{
+    position:relative;
+    z-index:2;
+    width:30%;
+    min-width:320px;
+    background:rgba($login-bg,0.6);
+    background:$login-bg \0;
+    filter:alpha(opacity=60)\0;
+    margin:0 auto;
+    .login {
+      color: $light;
+      width:72%;
+      margin:8% auto 0;
+      padding: 0 0 17%;
+      h1{
+        text-align:center;
+        font-family:微软雅黑;
+        font-weight:normal;
+        font-size:54px;
+        color:$light;
+        padding:13% 0 0;
+      }
+      p{
+        text-align:center;
+        font-family:Arial;
+        font-size:18px;
+        padding-bottom:5%;
+        margin:0;
+      }
+      p.error{
+        font-size:14px;
+        height:26px;
+        text-align:center;
+        color:$login-btn;
+      }
+      .input-container{
+        position:relative;
+        i{
+          display:block;
+          position:absolute;
+          top:50%;
+          left:10px;
+          font-size:14px;
+          color:$login-icon;
+          margin:-7px 0 0;
+        }
+        .form-control {
+          color: $base-color;
+          font-size: 14px;
+          height: auto;
+          padding-top: 4px;
+          padding-bottom: 4px;
+          border:none;
+        }
+        input[type="text"] {
+          margin-bottom: 25px;
+          border-radius: 30px;
+          background:$content-color;
+          color:$top-btn-color;
+          padding-left:30px;
+        }
+        input[type="password"] {
+          margin-bottom: 25px;
+          border-radius: 30px;
+          background:$content-color;
+          color:$top-btn-color;
+          padding-left:30px;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+          color: $top-btn-color; opacity:1;
+        }
+
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+          color: $top-btn-color;opacity:1;
+        }
+
+        input:-ms-input-placeholder{
+          color: $top-btn-color;opacity:1;
+        }
+
+        input::-webkit-input-placeholder{
+          color: $top-btn-color;opacity:1;
+        }
+        input:focus{
+          box-shadow:none;
+          color:$top-btn-color;
+          background:$input-focus;
+        }
+      }
+
+      .btn-danger {
+        border-radius: 30px;
+        width:100%;
+        margin:4px 0 0;
+        padding:4px 12px;
+        font-size:16px;
+        background:$login-btn;
+        border:none;
+        color:$top-btn-color;
+        &:focus,&:active{
+          box-shadow:none;
+          outline:none;
+        }
+        &:hover{
+          color:$light;
+        }
+      }
+    }
+  }
+
+  /*@media (max-width: 600px) {
+    .top-div{
+      .logo{
+        //width:94px;
+        //height:120px;
+        //float:left;
+        //background-size:cover;
+        margin-left:0px;
+        float: left;
+        background-size: 66px 80px;
+        width: 66px;
+        height: 80px;
+      }
+      .theme{
+        margin: 36px 0 0 34px;
+        font-size: 12px;
+      }
+    }
+    .login-bg{
+      width: auto;
+      min-width:100%;
+    }
+  }*/
+}
+
+
+

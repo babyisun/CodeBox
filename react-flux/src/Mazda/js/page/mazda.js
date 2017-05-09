@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, HashRouter, Route, Link,Redirect} from 'react-router-dom';
+import {BrowserRouter, HashRouter, Route, Link, Redirect} from 'react-router-dom';
 // import {createBrowserHistory} from 'history';
 // const history = createBrowserHistory();
 import {createHashHistory} from 'history';
@@ -12,18 +12,19 @@ import Login from '../component/Login.jsx';
 class Page extends React.Component {
     constructor(props) {
         super(props);
-        //console.log(props);
+        console.log("page once");
     }
+
     render() {
         console.log(this.props);
         return (<div>
             <div>header</div>
-            {/*<div>{this.props.children}</div>*/}
-            <div>
-                <Redirect to='/index'/>
-                <Route exact path="/index" component={Home}/>
-                <Route exact path="/login" component={Login}/>
-            </div>
+            <div>{this.props.children}</div>
+            {/*<div>
+             <Redirect to='/index'/>
+             <Route exact path="/index" component={Home}/>
+             <Route exact path="/login" component={Login}/>
+             </div>*/}
             <div>footer</div>
         </div>)
     }
@@ -36,7 +37,12 @@ ReactDOM.render(<HashRouter history={history}>
                 <li><Link to="/index">Home</Link></li>
                 <li><Link to="/login">login</Link></li>
             </ul>
-            <Route path="/" component={Page}/>
+
+            <Page>
+                <Redirect to='/index'/>
+                <Route exact path="/index" component={Home}/>
+                <Route exact path="/login" component={Login}/>
+            </Page>
 
         </div>
     </HashRouter>,

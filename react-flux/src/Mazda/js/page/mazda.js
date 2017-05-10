@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, HashRouter, Route, Link, Redirect} from 'react-router-dom';
+import {BrowserRouter, HashRouter, Route, Link, Redirect,Switch} from 'react-router-dom';
 // import {createBrowserHistory} from 'history';
 // const history = createBrowserHistory();
 import {createHashHistory} from 'history';
@@ -16,7 +16,7 @@ class Page extends React.Component {
     }
 
     render() {
-        console.log(this.props);
+        console.log("page render once");
         return (<div>
             <div>header</div>
             <div>{this.props.children}</div>

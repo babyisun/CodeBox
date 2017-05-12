@@ -70,7 +70,7 @@ var config = {
             exclude: /node_modules/,
             query: {
                 presets: ['es2015', 'stage-1', 'react'],
-                plugins: ["transform-es3-member-expression-literals", "transform-es3-property-literals"],
+                plugins: ["transform-es3-member-expression-literals", "transform-es3-property-literals"/*,'transform-decorators-legacy', 'transform-class-properties'*/],
                 compact: false
             }
         }]

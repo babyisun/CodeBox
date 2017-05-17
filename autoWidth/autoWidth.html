@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://sandbox.runjs.cn/show/9ndenq7q -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>自适应块</title>
+    <style>
+        html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    }
+    .content{
+        width: 100%;
+        height: 100%;
+        height: 800px;
+    }
+    .content .left,.content .right{
+        width: 50%;
+        height: 100%;
+        float: left;
+        text-align: center;
+
+    }
+    .content .right{
+        
+    }
+    .content .row{
+        position: absolute;
+        border: 5px solid #fff;
+        box-sizing: border-box;
+        color: #fff;
+        font-weight: bold;
+    }
+    .content .left .row1{
+        background: #8DC752;
+        /*background: #8DC752 url(ywglgz-small.png) no-repeat center;*/
+        /*vertical-align: middle;*/
+        overflow: hidden;
+        height: 25%;
+        width: 50%;
+        top: 0%;
+    }
+    .center-middle{
+            position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    
+    }
+    .content .left .row2{
+        background: #3AB1DF;
+        height: 50%;
+        width: 50%;
+        top: 25%;
+    }
+     .content .left .row3{
+        background: #E77440;
+        height: 25%;
+        width: 50%;
+        top: 75%;
+    }
+    .content .right .row1{
+        background: #5091DB;
+        height: 50%;
+        width: 50%;
+    }
+    .content .right .row .son-row{
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+     .content .right .row .son-row1{
+        border-right: 5px solid #fff;
+        box-sizing: border-box;
+    }
+     .content .right .row .son-row2{
+        border-left: 5px solid #fff;
+        box-sizing: border-box;
+    }
+    .content .right .row2 .son-row1{background: #E7B146}
+    .content .right .row2 .son-row2{background: #8DC752}
+    .content .right .row3 .son-row1{background: #5091DB}
+    .content .right .row3 .son-row2{background: #3AB1DF}
+     .content .right .row2{
+        background: #8DC752;
+        height: 25%;
+        width: 50%;
+        top: 50%;
+        
+    }
+    .content .right .row3{
+        background: #3AB1DF;
+        height: 25%;
+        width: 50%;
+        top: 75%;
+        
+    }
+
+
+</style>
+</head>
+<body>
+
+<div class="content">
+    <div class="left">
+        <div class="row row1">
+            <div class="center-middle">
+                <img src="ywglgz-small.png">
+                <div>业务管理规则</div>
+            </div>
+        </div>
+        <div class="row row2">2</div>
+        <div class="row row3">3</div>
+    </div>
+    <div class="right">
+         <div class="row row1">4</div>
+        <div class="row row2">
+        <div class="son-row son-row1">5-1</div>
+        <div class="son-row son-row2">5-2</div>
+        </div>
+        <div class="row row3">
+        <div class="son-row son-row1">6-1</div>
+        <div class="son-row son-row2">6-2</div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    
+</script>
+</body>
+</html>

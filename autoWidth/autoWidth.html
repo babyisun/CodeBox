@@ -14,6 +14,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-size: 62.5%;
     }
     .content{
         width: 100%;
@@ -35,6 +36,7 @@
         border: 5px solid #fff;
         box-sizing: border-box;
         color: #fff;
+        font-size: 1.2rem;
         font-weight: bold;
     }
     .content .left .row1{
@@ -46,15 +48,40 @@
         width: 50%;
         top: 0%;
     }
+
     .center-middle{
-            position: absolute;
-    width: 100px;
-    height: 100px;
-    left: 50%;
-    top: 50%;
-    margin-left: -50px;
-    margin-top: -50px;
-    
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        left: 50%;
+        top: 50%;
+        margin-left: -60px;
+        margin-top: -60px;
+        font-size: 1.6rem;
+    }
+    .center-middle img{width: 100%;}
+   
+    @media only screen and (min-width: 600px) and (max-width: 1400px) {
+        .center-middle{
+        width: 90px;
+        height: 90px;
+        left: 50%;
+        top: 50%;
+        margin-left: -50px;
+        margin-top: -50px;
+        font-size: 1.4rem;
+        }
+    }
+     @media (max-width: 600px){
+        .center-middle{
+        width: 74px;
+        height: 74px;
+        left: 50%;
+        top: 50%;
+        margin-left: -37px;
+        margin-top: -37px;
+        font-size: 1.2rem;
+        }
     }
     .content .left .row2{
         background: #3AB1DF;
@@ -113,10 +140,10 @@
 <div class="content">
     <div class="left">
         <div class="row row1">
-            <div class="center-middle">
-                <img src="ywglgz-small.png">
-                <div>业务管理规则</div>
-            </div>
+        <div class="center-middle">
+            <img src="ywglgz-small.png">
+            <div>业务管理规则</div>
+        </div>
         </div>
         <div class="row row2">2</div>
         <div class="row row3">3</div>

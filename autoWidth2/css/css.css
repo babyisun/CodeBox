@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ padding:0px; margin:0px;}
+ html, body {  margin: 0; padding: 0; overflow: hidden; font-size: 62.5%; }	
+/* 帮助中心首页 */
+.content{ width: 100%; height: 100%;  height: 684px;
+    margin-top: 50px;
+    position: relative;}
+.content .left,.content .right{ width: 50%; height: 100%; float: left; text-align: center; }
+.content .right{ }
+.content .row{ position: absolute;  border: 5px solid #fff;  box-sizing: border-box; color: #fff; font-size: 1.2rem; font-weight: bold;}
+.content .left .row1{ background: #8DC752; /*background: #8DC752 url(ywglgz-small.png) no-repeat center;*/  /*vertical-align: middle;*/
+ overflow: hidden; height: 25%; width: 50%;  /*top: 50px;*/ }
+ 
+.center-middle{ position: absolute; width: 120px;  height: 120px; left: 50%; top: 50%; margin-left: -60px; margin-top: -60px;  font-size: 1.6rem; }
+.center-middle img{width: 100%;}
+
+@media only screen and (min-width: 600px) and (max-width: 1400px) {
+.center-middle{  width: 90px; height: 90px;  left: 50%; top: 50%; margin-left: -50px; margin-top: -50px; font-size: 1.4rem; }
+    }
+@media (max-width: 600px){
+/*.center-middle{ width: 74px; height: 74px; left: 50%; top: 50%; margin-left: -37px; margin-top: -37px;font-size: 1.2rem; }*/
+.center-middle{ width: 80px; height: 74px; font-size: 1.2rem; top: -10px; right: 0px; left: 0px; bottom: 0px; margin: auto;}
+.middle2{ width: 80px; height: 74px; font-size: 1.2rem; top: -64px; right: 0px; left: 0px; bottom: 0px; margin: auto;}
+.middle3{ width: 70px; height: 74px; font-size: 1.2rem; top: -20px; right: 0px; left: 0px; bottom: 0px; margin: auto;}
+.middle4{ width: 80px; height: 74px; font-size: 1.2rem; top: -35px; right: 0px; left: 0px; bottom: 0px; margin: auto;}
+.middle5{ width: 50px; height: 74px; font-size: 1.0rem; top: 0px; right: 0px; left: 0px; bottom: 0px; margin: auto;}
+.middle6{ width: 50px; height: 74px; font-size: 1.0rem; top: 0px; right: 0px; left: 0px; bottom: 0px; margin: auto;}
+.middle7{ width: 50px; height: 74px; font-size: 1.0rem; top: 0px; right: 0px; left: 0px; bottom: 0px; margin: auto;}
+.middle8{ width: 50px; height: 74px; font-size: 1.0rem; top: 0px; right: 0px; left: 0px; bottom: 0px; margin: auto;}
+    }
+.content .left .row2{  background: #3AB1DF; height: 50%; width: 50%; top: 25%; /*margin-top:50px;*/}
+.content .left .row3{ background: #E77440;  height: 25%; width: 50%; top: 75%; }
+.content .right .row1{  background: #5091DB;  height: 50%;  width: 50%;}
+.content .right .row .son-row{ width: 50%; height: 100%; float: left; }
+.content .right .row .son-row1{ border-right: 5px solid #fff; box-sizing: border-box;}
+.content .right .row .son-row2{ border-left: 5px solid #fff; box-sizing: border-box;}
+.content .right .row2 .son-row1{background: #E7B146; position:relative;}
+.content .right .row2 .son-row2{background: #8DC752; position:relative;}
+.content .right .row3 .son-row1{background: #5091DB; position:relative;}
+.content .right .row3 .son-row2{background: #3AB1DF; position:relative;}
+.content .right .row2{  background: #8DC752;  height: 25%; width: 50%;  top: 50%; }
+.content .right .row3{  background: #3AB1DF;  height: 25%; width: 50%; top: 75%; }
+		
+/* 共用 */
+.helphead{ background:#f77724; line-height:50px; color:#fff; text-align:center; font-size:1.8rem; font-weight:bold;  position: fixed;
+    width: 100%;
+    height: 50px;}
+.bg{ margin-top:15px; float: left; width: 100%;}
+ p{ margin:0px; line-height:25px;}
+.box{ padding:10px; font-family:"微软雅黑"; color:#666;}
+
+
+
+

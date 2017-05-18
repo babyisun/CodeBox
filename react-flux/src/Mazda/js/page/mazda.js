@@ -6,17 +6,26 @@ import {BrowserRouter, HashRouter, Route, Link, Redirect,Switch} from 'react-rou
 import {createHashHistory} from 'history';
 const history = createHashHistory();
 
+import {observable} from 'mobx';
+import {observer,Provider,inject} from 'mobx-react';
+
 import Home from '../component/Home.jsx';
 import Login from '../component/Login.jsx';
 
+const person = observable({name:"aaa",age:21});
+
+//@inject("store")
+//@observer
 class Page extends React.Component {
+     //@observable nums=110;
+
     constructor(props) {
         super(props);
-        console.log("page once");
+         //console.log(props.store);
+        //console.log(this.nums+"a21");
     }
 
     render() {
-        console.log("page render once");
         return (<div>
             <div>header</div>
             <div>{this.props.children}</div>
@@ -31,7 +40,8 @@ class Page extends React.Component {
 }
 
 
-ReactDOM.render(<HashRouter history={history}>
+ReactDOM.render(<Provider store={person}>
+    <HashRouter history={history}>
         <div>
             <ul>
                 <li><Link to="/index">Home</Link></li>
@@ -45,6 +55,6 @@ ReactDOM.render(<HashRouter history={history}>
             </Page>
 
         </div>
-    </HashRouter>,
+    </HashRouter></Provider>,
     document.getElementById('page')
 );

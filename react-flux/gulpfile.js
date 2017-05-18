@@ -278,6 +278,7 @@ gulp.task('watch', function () {
     _webpack_config_min.watch = true;
     //console.log(_webpack_config);
     webpack(_webpack_config, function (err) {
+        //console.log(arguments)
         if (err) {
             console.log("------dev------");
             console.log(err);

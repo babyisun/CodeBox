@@ -12,7 +12,9 @@ import {observer,Provider,inject} from 'mobx-react';
 import Home from '../component/Home.jsx';
 import Login from '../component/Login.jsx';
 
-const person = observable({name:"aaa",age:21});
+//const person = observable({name:"aaa",age:21});
+import AppState from '../stores/store';
+const _appState=new AppState();
 
 //@inject("store")
 //@observer
@@ -40,7 +42,7 @@ class Page extends React.Component {
 }
 
 
-ReactDOM.render(<Provider store={person}>
+ReactDOM.render(<Provider store={_appState}>
     <HashRouter history={history}>
         <div>
             <ul>

@@ -3,16 +3,21 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
 		<link rel="stylesheet" type="text/css" href="3.3.5/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="font/iconfont.css">
 		<link rel="stylesheet" type="text/css" href="style/styles.css">
 		<link rel="stylesheet" type="text/css" href="style/appcalendar.css">
 		<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
-		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+
+		<link rel="stylesheet" href="style/swiper.min.css">
+    		<link rel="stylesheet" href="style/animate.min.css">
+    		<script src="js/swiper.min.js"></script>
+    		<script src="js/swiper.animate.min.js"></script>
 		
 		<title></title>
 	</head>
@@ -25,16 +30,20 @@
 						<a href="javascript:;"><</a>
 						<img src="img/logo1.png"></img>
 					</div>
-					<div class="col-xs-5 theme">
+					<div class="col-xs-4 theme">
 						<h4 class="">
 							长白山
 						</h4>
 						<span>超过1000个房源</span>
 					</div>
-					<div class="col-xs- menue">
+					<div class="col-xs-4 menue">
 						<i class="iconfont icon-xiangqu"></i>
 						<i class="iconfont icon-list"></i>
 					</div>
+					<div class="logo-lis">
+            				<div><a href="#"><img src="img/register.png" alt="">登录</a></div>
+             				<div class="list-register"><a href="#"><img src="img/register.png" alt="">注册</a></div>  
+        				</div>
 				</div>
 				<ul class="navs row">
 					<li class="time_fil">
@@ -67,7 +76,7 @@
 								<a href="javascript:;">更多</a>
 							</div>
 						</div>
-						<ul class="touristList">
+						<!-- <ul class="touristList">
 							<li>天池</li>
 							<li>魔界</li>
 							<li>望天鹅</li>
@@ -78,7 +87,35 @@
 							<li>望天鹅</li>
 							<li>大峡谷</li>
 							<li>长白山瀑布</li>
-						</ul>
+						</ul> -->
+						 <div class="list swiper-container">
+					            <ul class="swiper-wrapper">
+					                <li class="list-text swiper-slide">
+					                    <a href="#">天池111</a>
+					                    <a href="#">魔界</a>
+					                    <a href="#">望天鹅 </a>
+					                    <a href="#">大峡谷</a>
+					                    <a href="#" class="falls">长白山瀑布</a>
+					                </li>
+					                
+					                <li class="list-text swiper-slide">
+					                    <a href="#">天池222</a>
+					                    <a href="#">魔界</a>
+					                    <a href="#">望天鹅 </a>
+					                    <a href="#">大峡谷</a>
+					                    <a href="#" class="falls">长白山瀑布</a>
+					                </li>
+					            </ul>
+
+					            <div class="dot swiper-pagination">
+					                <span></span>
+					                <span></span>
+					                <span></span>
+					                <span></span>
+					                <span></span>
+					            </div>
+					           
+					        </div> 
 						<div class="nolimit">
 							不限地点
 						</div>
@@ -198,6 +235,6 @@
 			</div>
 		</div>
 	</body>
-	<script src="appcalendar.js" type="text/javascript"></script>
-	<script src="index.js" type="text/javascript"></script>
+	<script src="js/appcalendar.js" type="text/javascript"></script>
+	<script src="js/index.js" type="text/javascript"></script>
 </html>

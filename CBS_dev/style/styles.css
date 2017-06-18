@@ -71,6 +71,9 @@ li {
 }
 html {
   line-height: 1;
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: hidden;
 }
 a:hover {
   text-decoration: none !important;
@@ -88,6 +91,7 @@ a:hover {
 }
 body {
   with: 100%;
+  font-size: 62.5%;
   font: 14px/22px "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", Arial, Helvetica, sans-serif;
   color: #363636;
 }
@@ -111,7 +115,7 @@ body .header .logo a {
   outline: none;
 }
 body .header .logo img {
-  width: 66px;
+  max-width: 76%;
 }
 body .header .theme {
   text-align: center;
@@ -140,10 +144,38 @@ body .header .menue .icon-xiangqu {
   position: relative;
   top: 1px;
   right: 2px;
+}
+body .header .menue .active.icon-xiangqu {
   color: #20b093;
 }
-body .header .menue.active i {
-  color: #20b093;
+body .header .logo-lis {
+  display: none;
+  width: 30%;
+  /*height: 90px;*/
+  font-size: .24rem;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  background: white;
+  position: absolute;
+  top: 58px;
+  right: 3%;
+  z-index: 2;
+}
+body .header .logo-lis div {
+  height: 42px;
+  border-bottom: 1px solid #ebebeb;
+  line-height: 46px;
+  text-align: center;
+}
+body .header .logo-lis div a {
+  color: #333;
+}
+body .header .logo-lis div img {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: text-bottom;
+  margin-right: 8px;
 }
 body .navs {
   height: 48px;
@@ -208,6 +240,7 @@ body .filter .area {
   overflow: hidden;
   position: relative;
   padding: 20px 0;
+  height: 100%;
   background: #f2f2f2;
 }
 body .filter .area i {
@@ -242,6 +275,48 @@ body .filter .area .touristList li {
   padding: 10px 20px 10px 0;
   float: left;
 }
+body .filter .area .list {
+  width: 100%;
+  height: 92px;
+  overflow: hidden;
+  position: relative;
+}
+body .filter .area .list ul {
+  display: flex;
+  height: 100%;
+  margin-left: 0px;
+  padding-left: 0;
+}
+body .filter .area .list ul li {
+  /*width:7.2rem !important;*/
+  display: inline-block;
+  height: 68px;
+  line-height: 68px;
+}
+body .filter .area .list ul li a {
+  color: #606060;
+  line-height: 1.39rem;
+  margin-right: .58rem;
+}
+body .filter .area .list ul li .falls {
+  margin-right: 0;
+}
+body .filter .area .list .dot {
+  width: 100%;
+  height: .24rem;
+  position: absolute;
+  bottom: .66rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .filter .area .list .dot span {
+  width: 10px;
+  height: 1.5px;
+  border-radius: 2px;
+  background: #20b093;
+  margin: 0 .18rem;
+}
 body .filter .area .nolimit {
   width: 100%;
   background: #fff;
@@ -249,6 +324,8 @@ body .filter .area .nolimit {
   border-top: 1px solid #d7d7d7;
   padding: 10px 0;
   color: #20b093;
+  position: absolute;
+  bottom: 0px;
 }
 body .filter .more {
   background: #f2f2f2;
@@ -297,7 +374,7 @@ body .filter .more .option ul li {
   width: 24px;
   height: 24px;
   border-radius: 24px;
-  border: 1px solid transparent;
+  border: 1px solid #d7d7d7;
   text-align: center;
   margin-right: 20px;
 }
@@ -316,11 +393,11 @@ body .filter .more .option .type div {
 body .filter .more .option .type div i {
   display: inline-block;
   width: 100%;
+  height: 40px;
 }
 body .filter .more .option .type div .icon-haofangtuoiconfont_zhinengmensuo {
   font-size: 90px;
   display: block;
-  margin-bottom: 15px;
   margin-left: -11px;
 }
 body .filter .more .option .type div .icon-chuangweichuzu {
@@ -328,6 +405,11 @@ body .filter .more .option .type div .icon-chuangweichuzu {
 }
 body .filter .more .option .type div .icon-webiconzhengtao {
   font-size: 50px;
+}
+body .filter .more .option .type div span {
+  display: inline-block;
+  width: 100%;
+  padding: 2px;
 }
 body .filter .more .option .type .active {
   color: #20b093;
@@ -349,9 +431,12 @@ body .filter .more .option .facilities i {
   font-size: 50px;
   display: inline-block;
   width: 100%;
+  height: 40px;
 }
 body .filter .more .option .facilities span {
   font-size: 12px;
+  dispaly: inline-block;
+  width: 100%;
 }
 body .filter .recommend {
   background: #fff;
@@ -370,6 +455,10 @@ body .filter .recommend .active {
 body .list {
   width: 100%;
   margin: 0;
+  position: relative;
+}
+body .list li {
+  position: relative;
 }
 body .list .card {
   position: relative;
@@ -442,4 +531,16 @@ body .list .product .comment .star .score {
 body .list .product .comment .star .num {
   color: #999999;
   font-size: 12px;
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+  background: url(../img/bbtn.png) no-repeat !important;
+  background-size: cover !important;
+  width: 18px !important;
+  height: 25px !important;
+  margin-top: -3px !important;
+  outline: none !important;
+}
+.ui-widget.ui-widget-content {
+  height: 12px !important;
 }

@@ -1,0 +1,277 @@
+.re-date-area {
+  display: inline-block;
+  cursor: pointer;
+}
+.app-calendar {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  z-index: 10000;
+  background: #ffffff;
+  width: 100%;
+}
+.app-calendar em {
+  font-style: normal;
+  padding-right: 4px;
+}
+.app-calendar .header-box.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  border-bottom: #d4d4d4 0 solid;
+  background: #22ca92;
+  color: #333333;
+}
+.app-calendar .header-box.fixed .re-icon {
+  color: #fff !important;
+}
+.app-calendar .header-box .header-back {
+  position: absolute;
+  font-size: 16px;
+}
+.app-calendar .header-box .header-action {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  font-size: 16px;
+}
+.app-calendar .header-box h1 {
+  text-align: center;
+  font-size: 16px;
+}
+.app-calendar .headerWeek {
+  position: fixed;
+  top: 44px;
+  z-index: 50;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #dce1e6;
+  color: #333333;
+}
+.app-calendar .headerWeek table {
+  width: 100%;
+}
+.app-calendar .headerWeek table th {
+  text-align: center;
+  height: 24px;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #333333;
+  /*font-weight: medium*/
+}
+.app-calendar .headerWeek table .weekend {
+  color: #ff8205;
+}
+.app-calendar .calendar-list {
+  padding-top: 24px;
+}
+.app-calendar .tn-calendar {
+  width: 100%;
+  overflow: hidden;
+}
+.app-calendar .tn-item-container {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.app-calendar .tn-item-container .tn-c-header {
+  text-align: center;
+  font-size: 18px;
+  /*font-weight: medium;*/
+  color: #333333;
+  padding: 15px 0 11.5px 0;
+}
+.app-calendar .tn-item-container .tn-c-header .icon-arrow-right {
+  float: right;
+  padding: 24px;
+  color: #ff6000;
+}
+.app-calendar .tn-item-container .tn-c-header .icon-arrow-left {
+  float: left;
+  padding: 24px;
+  color: #ff6000;
+}
+.app-calendar .tn-item-container .tn-c-body {
+  clear: both;
+}
+.app-calendar .tn-item-container .tn-c-body .tn-c-week {
+  display: none;
+}
+.app-calendar .tn-item-container .tn-c-body tbody {
+  width: 100%;
+}
+.app-calendar .tn-item-container .tn-c-body table {
+  width: 100%;
+}
+.app-calendar .tn-item-container .tn-c-body th {
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+  vertical-align: middle;
+  background: #dfdfdf;
+  font-size: 12px;
+  color: #666;
+}
+.app-calendar .tn-item-container .tn-c-body td {
+  text-align: center;
+  height: 60px;
+  vertical-align: middle;
+  line-height: 60px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  display: inline-block;
+  color: #333333;
+  width: 14.27%;
+  background-color: #fff;
+  position: relative;
+  border-radius: 40px;
+}
+.app-calendar .tn-item-container .tn-c-body td em.top-center {
+  color: #666;
+  font-size: 10px;
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  color: #999;
+  width: 24px;
+  height: 14px;
+}
+.app-calendar .tn-item-container .tn-c-body td em.top-center.special {
+  color: #ff6010;
+}
+.app-calendar .tn-item-container .tn-c-body td em.bottom-center {
+  color: #666;
+  font-size: 10px;
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  height: 14px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  color: #999;
+  width: 45px;
+}
+.app-calendar .tn-item-container .tn-c-body td em.bottom-center.special {
+  color: #ff6010;
+}
+.app-calendar .tn-item-container .tn-c-body td p {
+  font-size: 18px;
+  margin: 0;
+}
+.app-calendar .tn-item-container .tn-c-body td.weekend {
+  color: #ff8205;
+}
+.app-calendar .tn-item-container .tn-c-body td.weekend p {
+  color: #ff8205;
+}
+.app-calendar .tn-item-container .tn-c-body td.selected {
+  color: #fff;
+  background: #20b093;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+.app-calendar .tn-item-container .tn-c-body td.selected p {
+  color: #fff;
+  font-size: 18px;
+}
+.app-calendar .tn-item-container .tn-c-body td.selected em {
+  color: #fff !important;
+}
+.app-calendar .tn-item-container .tn-c-body td.disabled {
+  color: #999;
+  text-decoration: line-through;
+}
+.app-calendar .tn-item-container .tn-c-body td.normal {
+  color: #ff6000;
+}
+.app-calendar .tn-item-container .tn-c-body td.beselected {
+  background-color: #f5f5f5;
+  color: #20b093;
+  border-radius: 0px;
+}
+.app-calendar .tn-calendar-head {
+  position: fixed;
+  top: 44px;
+  z-index: 50;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  color: #333333;
+}
+.app-calendar .tn-calendar-head table {
+  width: 100%;
+}
+.app-calendar .tn-calendar-head table th {
+  text-align: center;
+  height: 24px;
+  vertical-align: middle;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: normal;
+  background: #f7f7f7;
+}
+.app-calendar .tn-calendar-head .theme {
+  height: 44px;
+  line-height: 44px;
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #20b093;
+  z-index: 2;
+}
+.app-calendar .tn-calendar-head .theme h1 {
+  text-align: center;
+  font-family: 微软雅黑;
+  font-size: 100%;
+  margin-top: 10px;
+  line-height: 44px;
+  margin: 0;
+  padding: 0;
+}
+.app-calendar .tn-calendar-head .theme .re-icon {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.app-calendar .tn-calendar-head .theme .re-icon-point-left {
+  text-align: center;
+  line-height: 44px;
+  width: 44px;
+  cursor: pointer;
+}
+.calendar-depTips,
+.calendar-arrTips {
+  position: fixed;
+  left: 50%;
+  margin-left: -2000px;
+  bottom: 50px;
+  padding: 10px 30px;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  text-align: center;
+  color: #fff;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  font-size: 18px;
+  -webkit-transition: all .8s ease;
+  -moz-transition: all .8s ease;
+  -o-transition: all .8s ease;
+  transition: all .8s ease;
+  z-index: 10000;
+}
+.fade-in {
+  margin-left: -100px;
+}
+.fade-out {
+  margin-left: 2000px;
+}

@@ -113,7 +113,7 @@
 
     //点击便利施舍
     $(".facilities>div").click(function() {
-        $(".facilities div").not(this).removeClass("active");
+        //$(".facilities div").not(this).removeClass("active");
         $(this).toggleClass("active")
     })
 

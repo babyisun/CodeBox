@@ -1,7 +1,6 @@
 # 自建代码案例库
 ## 插件积累
 ### mark语法研习
-#### 四个有效？
 
 This is the **simplest** and **slickest** Markdown editor. 
 Just write Markdown and see what it looks like as you type. And convert it to HTML in one click.

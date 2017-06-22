@@ -3,7 +3,7 @@
 ### mark语法研习
 
 This is the **simplest** and **slickest** Markdown editor. 
-Just write Markdown and see what it looks like as you type. And convert it to HTML in one click.
+在这收集日常代码
 
 ## Getting started
 

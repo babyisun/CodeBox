@@ -2,4 +2,3 @@
 document.getElementsByTagName("link")[0].setAttribute("href","a")
 document.getElementsByTagName("link")[0].href="a"
 $("link").attr("href","a")
-//js

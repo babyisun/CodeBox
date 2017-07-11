@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jqm</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+    <script src="js/jquery.js"></script>
+    <script>
+    $(document).bind("mobileiinit", function() {
+        $.mobile.selectmenu.prototype.options.nativeMenu = false;
+        $.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
+    });
+    </script>
+    <script src="js/jquery.mobile-1.4.5.js"></script>
+</head>
+
+<body>
+    <div data-role="page" id="firstview" data-theme="a" data-add-back-btn="true" data-back-btn-text="后退">
+        <header data-role="header">第一个视图</header>
+        <article data-role="content">
+            <a href="#secondview" data-role="button" data-inline="true" data-icon="home" data-transition="slidedown">切换到2</a>
+            <button data-inline="true" data-mini="true">hello</button>
+            <button data-inline="true">word</button>
+            <div>
+                <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
+            </div>
+            <div>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" value="" placeholder="请输入姓名">
+                    <label for="Password">Password:</label>
+                    <input type="Password" name="Password" id="Password" value="" placeholder="请输入密码">
+                    <label for="tel">tel:</label>
+                    <input type="tel" name="tel" id="tel" value="">
+                    <label for="Number">Number:</label>
+                    <input type="number" name="Number" id="Number" value="">
+                    <label for="email">email:</label>
+                    <input type="email" name="email" id="email" value="">
+                    <label for="url">url:</label>
+                    <input type="url" name="url" id="url" value="http://">
+                    <label for="search">搜索:</label>
+                    <input type="search" name="search" id="search" value="">
+                    <input type="submit" value="提交">
+                    <!-- <div data-role="fieldcontain">  -->
+                    <label for="slider">slider</label>
+                    <input type="range" step="2" name="slider" id="slider" value="2" min="0" max="50">
+                    <!-- </div> -->
+                    <label for="switch">switch</label>
+                    <select name="switch" data-role="slider">
+                        <option value="off">OFF</option>
+                        <option value="on">ON</option>
+                    </select>
+                    <fieldset data-role="controlgroup">
+                        <!-- <fieldset data-role="controlgroup" data-type="horizontal"> -->
+                        <legend>请选择</legend>
+                        <input type="radio" id="radio-1" name="radio-age" value="any" checked>
+                        <label for="radio-1">不限</label>
+                        <input type="radio" id="radio-2" name="radio-age" value="16-22" checked>
+                        <label for="radio-2">16-22</label>
+                        <input type="radio" id="radio-3" name="radio-age" value="23-30" checked>
+                        <label for="radio-3">23-30</label>
+                    </fieldset>
+                    <div data-role="controlgroup"  class="ui-field-contain">
+                        <label for="select" class="select">请选择</label>
+                        <!-- data-icon="gear" data-inline="true" -->
+                        <select name="select" id="select" data-icon="gear" multiple  data-native-menu="false">
+                            <option value="" data-placeholder="true">请选择</option>
+                            <optgroup label="娱乐类" />
+                            <option value="movie">电影</option>
+                            <option value="music">音乐</option>
+                            <optgroup label="文体类" />
+                            <option value="sport">体育</option>
+                            <option value="travel">旅游</option>
+                        </select>
+                        <label for="select" class="select" data-native-menu="true">请选择</label>
+                        <!-- data-icon="gear" data-inline="true" -->
+                        <select name="select" id="select" data-inline="true">
+                            <option value="" data-placeholder="true">请选择</option>
+                            <optgroup label="娱乐类" />
+                            <option value="movie">电影</option>
+                            <option value="music">音乐</option>
+                            <optgroup label="文体类" />
+                            <option value="sport">体育</option>
+                            <option value="travel">旅游</option>
+                        </select>
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="select-custom-1">Basic:</label>
+                        <select name="select-custom-1" id="select-custom-1" data-native-menu="false">
+                            <option value="1">The 1st Option</option>
+                            <option value="2">The 2nd Option</option>
+                            <option value="3">The 3rd Option</option>
+                            <option value="4">The 4th Option</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </article>
+        <footer data-role="footer">页脚</footer>
+    </div>
+    <div data-role="page" id="secondview" data-theme="b" data-add-back-btn="true" data-back-btn-text="后退">
+        <header data-role="header">第二个视图</header>
+        <article data-role="content">
+            <div data-role="controlgroup" data-type="horizontal">
+                <a href="#thirdview" data-role="button" data-icon="arrow-l" data-iconpos="top" data-transition="slideup">切换到3</a>
+                <a href="#thirdview" data-role="button" data-icon="arrow-l" data-iconpos="top" data-transition="slideup">切换到3</a>
+                <a href="#thirdview" data-role="button" data-icon="arrow-l" data-iconpos="top" data-transition="slideup">切换到3</a>
+            </div>
+        </article>
+        <footer data-role="footer">
+            <nav data-role="navbar">
+                <ul>
+                    <li><a href="javascript:;" class="ui-btn-active">照片</a></li>
+                    <li><a href="javascript:;">状态</a></li>
+                    <li><a href="javascript:;">信息</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+    <div data-role="page" id="thirdview" data-theme="a">
+        <header data-role="header" data-position="fixed">
+            <a href="#" data-role="button" data-icon="back" data-iconpos="notext"></a>
+            <h1>九宫格</h1>
+            <a href="#" data-role="button" data-icon="forward" data-iconpos="notext"></a>
+        </header>
+        <article class="ui-grid-b">
+            <div class="ui-block-a">
+                <a href="#" data-role="button" data-icon="home" data-iconpos="top">首页</a>
+            </div>
+            <div class="ui-block-b">
+                <a href="#firstview" data-role="button" data-icon="grid" data-iconpos="top" data-transition="slideup">列表</a>
+            </div>
+            <div class="ui-block-c">
+                <a href="#firstview" data-role="button" data-icon="star" data-iconpos="top">加星</a>
+            </div>
+            <div class="ui-block-a">
+                <a href="#" data-role="button" data-icon="info" data-iconpos="top">信息</a></div>
+            <div class="ui-block-b">
+                <a href="#" data-role="button" data-icon="search" data-iconpos="top">搜索</a>
+            </div>
+            <div class="ui-block-c">
+                <a href="#" data-role="button" data-icon="gear" data-iconpos="top">设置</a>
+            </div>
+            <div class="ui-block-a">
+                <a href="#firstview" data-role="button" data-icon="check" data-iconpos="top">已选</a>
+            </div>
+            <div class="ui-block-b">
+                <a href="#" data-role="button" data-icon="alert" data-iconpos="top">提示</a></div>
+            <div class="ui-block-c">
+                <a href="#" data-role="button" data-icon="plus" data-iconpos="top">添加</a>
+            </div>
+        </article>
+        <footer data-role="footer">
+            <!-- <div data-role="collapsible-set">
+                <div data-role="collapsible">
+                    <h1>可折叠标题</h1>
+                    <p>这是一个折叠区域</p>
+                </div>
+                <div data-role="collapsible">
+                    <h1>可折叠标题</h1>
+                    <p>这是一个折叠区域</p>
+                </div>
+            </div> -->
+        </footer>
+    </div>
+    <script type="text/javascript">
+    $(function() {
+
+        $.mobile.selectmenu.prototype.options.hidePlaceholderMenuItems = false;
+    });
+    </script>
+</body>
+
+</html>

@@ -14,7 +14,7 @@
 		.polygon-frist{
 			overflow:hidden;
 		}
-		.polygon-frist:before{
+		.polygon-frist:before,.polygon:before{
 			content:" ";
 			left: -10px;
 			width: 100px;
@@ -26,7 +26,7 @@
             -webkit-transform:skew(20deg); 
             z-index: -1;
 		}
-		.polygon-frist:after{
+		.polygon-frist:after,.polygon:after{
 			content:" ";
 			left: -10px;
 			top:50px;
@@ -41,31 +41,11 @@
             z-index: -1;
 		}
 		
-		.polygon:before{
-			content:" ";
-			width: 100px;
-			height:50px;
-    		background-color: #3676b5;
-    		display: block;
-    		position: absolute;
-    		transform:skew(20deg);
-            -webkit-transform:skew(20deg); 
-            z-index: -1;
+		.polygon-frist:before,.polygon-frist:after{
+			left: -10px;
 		}
-		.polygon:after{
-			content:" ";
-			top:50px;
-			top:49px\0;
-			width: 100px;
-			height:50px;
-    		background-color: #3676b5;
-    		display: block;
-    		position: absolute;
-    		transform:skew(-20deg);
-            -webkit-transform:skew(-20deg); 
-            z-index: -1;
-            
-		}
+		
+
 		div:first-child{
 			position: absolute;
 			top:30%;

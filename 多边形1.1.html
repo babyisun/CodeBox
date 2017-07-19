@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.polygon-frist,.polygon{
+			width: 100px;
+			height: 100px;
+			font-size: 20px;
+		    color: #fff;
+		    line-height: 100px;
+		    text-align: center;
+		}
+		.polygon-frist{
+			overflow:hidden;
+		}
+		.polygon-frist:before{
+			content:" ";
+			left: -10px;
+			width: 100px;
+			height:50px;
+    		background-color: #3676b5;
+    		display: block;
+    		position: absolute;
+    		transform:skew(20deg);
+            -webkit-transform:skew(20deg); 
+            z-index: -1;
+		}
+		.polygon-frist:after{
+			content:" ";
+			left: -10px;
+			top:50px;
+			top:49px\0;
+			width: 100px;
+			height:50px;
+    		background-color: #3676b5;
+    		display: block;
+    		position: absolute;
+    		transform:skew(-20deg);
+            -webkit-transform:skew(-20deg); 
+            z-index: -1;
+		}
+		
+		.polygon:before{
+			content:" ";
+			width: 100px;
+			height:50px;
+    		background-color: #3676b5;
+    		display: block;
+    		position: absolute;
+    		transform:skew(20deg);
+            -webkit-transform:skew(20deg); 
+            z-index: -1;
+		}
+		.polygon:after{
+			content:" ";
+			top:50px;
+			top:49px\0;
+			width: 100px;
+			height:50px;
+    		background-color: #3676b5;
+    		display: block;
+    		position: absolute;
+    		transform:skew(-20deg);
+            -webkit-transform:skew(-20deg); 
+            z-index: -1;
+            
+		}
+		div:first-child{
+			position: absolute;
+			top:30%;
+			left: 50%;
+		}
+		div{
+			position: absolute;
+			top:50%;
+			left: 50%;
+		}
+	</style>
+</head>
+<body>
+<div class="polygon-frist">60%</div>
+<div class="polygon">8%</div>
+</body>
+</html>

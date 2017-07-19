@@ -27,5 +27,5 @@ Just start typing in the left panel.
 - The editor automatically saves what you write locally for future use.  
   If using a public computer, close all tabs before leaving the editor
   
-### mark语法研习
+### mark语法
 

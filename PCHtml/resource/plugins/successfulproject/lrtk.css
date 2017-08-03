@@ -1,0 +1,30 @@
+/* CSS Document */
+/*成功项目*/
+.SuccessfulProject { width: 1160px; margin: 20px auto 0px; position: relative; _height: 100%; }
+.picbox { width: 1160px; height: 480px; overflow: hidden; position: relative; }
+.piclist { height: 450px; position: absolute; left: 0px; top: 0px }
+.piclist2 { height: 350px; position: absolute; left: 0px; top: 0px }
+.piclist li, .piclist2 li { margin-right: 0px; padding: 0px; float: left; }
+.swaplist, .swaplist2 { position: absolute; left: -3000px; top: 0px }
+/*左右滚动*/
+.og_prev, .og_next { width: 30px; height: 50px; background: url(../../images/icon.png) no-repeat; position: absolute; top: 170px; z-index: 99; cursor: pointer; filter: alpha(opacity=70); opacity: 0.7; }
+.og_prev2, .og_next2 { width: 30px; height: 50px; background: url(../../images/icon.png) no-repeat;  position: absolute; top: 150px; z-index: 99; cursor: pointer; filter: alpha(opacity=70); opacity: 0.7; }
+.og_prev, .og_prev2 { background-position: 0 -60px; left: -34px; }
+.og_next, .og_next2 { background-position: 0 0; right: -34px; }
+.card { width: 568px; margin-right: 20px; _margin-right: 10px; border-radius: 5px; border: 1px solid #ddd; }
+.fl { float: left; }
+.fr { float: right; }
+.boxsha { box-shadow: 0px 3px rgba(0, 0, 0, 0.07); }
+.bgfff { background: #FFF; }
+/*图片*/
+.newproimg { overflow: hidden; position: relative; border-radius: 5px 5px 0px 0px; }
+.newproimg img { width: 568px; height: 194px; border-radius: 5px 5px 0px 0px; transition: 1s; }
+.newproimg img:hover { transform : scale(1.2); -webkit-transform: scale(1.2); }
+.h-tilte {  margin:0px 10px; border-bottom: #f1f1f1 1px solid; padding-bottom: 10px;}
+.h-tilte h4{ color: #515151; height: 30px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 30px; margin:10px 0px 0px 0px;}
+.h-tilte h4:hover{ color: #ef591c;}
+.h-tilte .text-muted{height: 30px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin:0px;}
+.h-tilte span.label { border: #e5e5e5 1px solid; color: #89c3f7; border-radius: 10px; padding: 1px 3px; margin-right: 10px;}
+.h-tilte span.leftProgress{ width: 90%; float: left; }
+/*章*/
+.chapter{position: absolute; z-index: 999; top:160px; right:20px;}

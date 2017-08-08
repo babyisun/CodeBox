@@ -28,4 +28,4 @@ Just start typing in the left panel.
   If using a public computer, close all tabs before leaving the editor
   
 ### 语法
-
+技术易学，思维难变~

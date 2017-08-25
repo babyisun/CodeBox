@@ -18,7 +18,6 @@ Just start typing in the left panel.
 ### Most useful shortcuts
 
 - `CTRL + O` to open files
-- `CTRL + T` to open a new tab
 - `CTRL + S` to save the current file or tab
 
 ### Privacy

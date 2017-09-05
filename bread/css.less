@@ -1,0 +1,84 @@
+@height: 40px;
+@half: @height / 2;
+@gutter: 5px;
+@blue: #50ABE4;
+@pink: #EF72B6;
+@background: antiquewhite;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: @height;
+  background-color: @background;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.4em;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.breadcrumb {
+  li {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    height: @height;
+    line-height: @height;
+    padding: 0 @height;
+    background-color: @blue;
+    color: white;
+    
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+    }
+    
+    & + li {
+      margin-left: @gutter;
+      
+      &:before {
+        left: 0;
+        top: 0;
+        border-top: @half solid transparent;
+        border-left: @half solid @background;
+        border-bottom: @half solid transparent;
+      }
+    }
+    
+    &:first-child {
+      border-radius: @half 0 0 @half;
+    }
+    
+    &:last-child {
+      border-radius: 0 @half @half 0;
+    }
+    
+    &:not(:last-child) {
+      padding-right: @half;
+      
+      &:after {
+        z-index: 1;
+        right: -@half;
+        bottom: 0;
+        border-top: @half solid transparent;
+        border-bottom: @half solid transparent;
+        border-left: @half solid @blue;
+      }
+    }
+    
+    &:hover {
+      background-color: @pink;
+      border:1px red solid;
+      
+      &:after {
+        border-left-color: @pink;
+        border-left: @half solid red;
+      }
+    }
+  }
+}

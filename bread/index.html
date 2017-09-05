@@ -1,0 +1,71 @@
+<!DOCTYPE html><html>
+<head>
+<style class="cp-pen-styles">
+html {
+  font-size: 62.5%;
+}
+body {
+  padding: 40px;
+  background-color: antiquewhite;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.4em;
+}
+a:hover {
+  cursor: pointer;
+}
+.breadcrumb li {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 40px;
+  background-color: #50ABE4;
+  color: white;
+}
+.breadcrumb li:before,
+.breadcrumb li:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.breadcrumb li + li {
+  margin-left: 5px;
+}
+.breadcrumb li + li:before {
+  left: 0;
+  top: 0;
+  border-top: 20px solid transparent;
+  border-left: 20px solid antiquewhite;
+  border-bottom: 20px solid transparent;
+}
+.breadcrumb li:first-child {
+  border-radius: 20px 0 0 20px;
+}
+.breadcrumb li:last-child {
+  border-radius: 0 20px 20px 0;
+}
+.breadcrumb li:not(:last-child) {
+  padding-right: 20px;
+}
+.breadcrumb li:not(:last-child):after {
+  z-index: 1;
+  right: -20px;
+  bottom: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #50ABE4;
+}
+.breadcrumb li:hover {
+  background-color: #EF72B6;
+}
+.breadcrumb li:hover:after {
+  border-left-color: #EF72B6;
+}
+</style></head><body>
+<ul class="breadcrumb">
+  <li>One</li><li>Two</li><li>Three</li>
+</ul>
+
+</body></html>

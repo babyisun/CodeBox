@@ -1,3 +1,4 @@
+//only use to current version
 var finished = location.href.indexOf("gettoseeperf") > 0, _dom = finished ? $(".tablebox:eq(1)") : $("#perf_table");
 var KPI_Action = function (finished) {
     try {

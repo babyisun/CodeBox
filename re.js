@@ -1,4 +1,4 @@
-//URL快捷方式注入
+//URL快捷方式注入，建成.url浏览器快捷方式
 
 //压缩码
 javascript: void function (g, d, m, s) {

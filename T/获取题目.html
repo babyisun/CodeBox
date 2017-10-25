@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="data.js"></script>
+    <script>
+        var getList = function (data, key) {
+            if (data && data.data && data.data.list) {
+                var output = [];
+                for (var i = 0; i < data.data.list.length; i++) {
+                    var temp = data.data.list[i];
+                    if (temp && temp.title.indexOf(key) >= 0) {
+                        for (var j = 0; j < temp.list.length; j++) {
+                            var t = temp.list[j];
+                            if (t && t.video) {
+                                //console.log(t.video.highWatchUrl);
+                                output.push(t.video.highWatchUrl);
+                            }
+                        }
+                    }
+                }
+                var str = output.join("\n");
+                document.write(str);
+                console.log(str);
+            }
+        }
+
+        getList(math, "2014年1月");
+    </script>
+</body>
+
+</html>

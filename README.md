@@ -5,7 +5,6 @@ This is the **simplest** and **slickest** Markdown editor.
 在这收集日常代码
 
 ## Getting started
-
 ### How?
 
 Just start typing in the left panel.

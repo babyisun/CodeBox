@@ -1,0 +1,140 @@
+$white:#fff;
+$blue:#35a1b9;
+$pink:#c8303f;
+$bgfrom:#111a22;
+$bgto:#101820;
+/*旋转动画*/
+@mixin rotateOut($val:360) {
+  transform: rotate(#{$val}deg) scale(0);
+  -webkit-transform: rotate(#{$val}deg) scale(0);
+  -moz-transform: rotate(#{$val}deg) scale(0);
+  -o-transform: rotate(#{$val}deg) scale(0);
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+}
+@mixin rotateIn($val:0) {
+  transform: rotate(#{$val}deg) scale(1);
+  -webkit-transform: rotate(#{$val}deg) scale(1);
+  -moz-transform: rotate(#{$val}deg) scale(1);
+  -o-transform: rotate(#{$val}deg) scale(1);
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+}
+
+*{
+  margin:0;padding:0;
+}
+html{
+  width:100%;
+  height:100%;
+}
+body{
+  overflow:hidden;
+  background:-moz-linear-gradient(left,$bgfrom, $bgto);/*Mozilla*/
+  background:-webkit-gradient(linear,0 50%,100% 50%,from($bgfrom),to($bgto));/*Old gradient for webkit*/
+  background:-webkit-linear-gradient(left,$bgfrom, $bgto);/*new gradient for Webkit*/
+  background:-o-linear-gradient(left,$bgfrom, $bgto); /*Opera11*/
+  width:100%;
+  height:100%;
+  font-family:微软雅黑;
+}
+
+.danmu {
+  position: absolute;
+  display:inline-block;
+  right: 100%;
+  animation: danmu 8s linear 0s 1;
+  white-space: nowrap;
+}
+
+@keyframes danmu {
+  from {
+    right: 100%;
+    transform: translateX(100%);
+  }
+  to {
+    right: 0;
+    transform: translateX(100%);
+  }
+}
+
+.blue{
+  background:$blue;
+}
+.pink {
+  background:$pink;
+}
+
+.container{
+  height:100%;
+  margin:0 auto;
+  background:url(../../images/success.jpg) center 0 / contain no-repeat;
+  .photo{
+    padding-top:11.24%;
+    .person{
+      width:100%;
+      .person_photo{
+        border-radius:50%;
+        overflow:hidden;
+      }
+      .rotateIn{
+        @include rotateIn;
+      }
+      .rotateOut{
+        @include rotateOut;
+      }
+
+      h2{
+        text-align:center;
+        font-weight:normal;
+        color:$white;
+        span{
+          padding:0 1%;
+        }
+      }
+      .img{
+        margin:0 auto;
+        overflow:hidden;
+      }
+    }
+  }
+}
+.bottom{
+  width:100%;
+  overflow:hidden;
+  position:fixed;
+  bottom:0;
+  color:$white;
+  .msg-walls{
+    float:left;
+    overflow:hidden;
+    position:relative;
+  }
+  .erweima{
+    float:right;
+    background:$blue;
+  }
+}
+/*.bottom{
+  width:100%;
+  overflow:hidden;
+  position:fixed;
+  bottom:0;
+  color:$white;
+  .msg-walls{
+    float:left;
+    overflow:hidden;
+    width:100%;
+    position:relative;
+    z-index:2;
+  }
+  .erweima{
+    position:absolute;
+    background:$blue;
+    z-index:3;
+  }
+}*/

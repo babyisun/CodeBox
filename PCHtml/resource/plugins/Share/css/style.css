@@ -1,0 +1,164 @@
+﻿.bdshare-button-style0-24 .bds_weixin{background-position:0px !important;}
+.bdshare-button-style0-24 .bds_sqq{background-position:0px !important;}
+a, area {
+blr:expression(this.onFocus=this.blur())
+}
+:focus {
+	-moz-outline-style: none
+}
+.hidden, .hide {
+	display: none
+}
+.block, .show {
+	display: block
+}
+.fline {
+	float: left;
+	display: inline
+}
+.clearfix:after {
+	clear: both;
+	content: ".";
+	height: 0;
+	display: block;
+	visibility: hidden
+}
+.chgBtn {
+	cursor: pointer
+}
+.fwr {
+	font-family: "微软雅黑"
+}
+.far {
+	font-family: Arial
+}
+.fb {
+	font-weight: bold
+}
+.auto {
+	margin-left: auto!important;
+	margin-right: auto!important
+}
+.cor_red {
+	color: #ff0000
+}
+.cor_org {
+	color: #FF4400;
+}
+.cor_bs, .cor_bs:hover {
+	color: #fff
+}
+.autoImg img {
+	height: auto;
+	width: 100%;
+	display: block;
+}
+.button {
+	display: inline-block;
+	zoom: 1;
+*display: inline;
+	vertical-align: baseline;
+	margin: 0 2px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: 0.25em 0.6em 0.3em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.red {
+	color: #faddde;
+	border: solid 1px #980c10;
+	background: #d81b21;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ed1c24), to(#A51715));
+	background: -moz-linear-gradient(top, #ed1c24, #A51715);
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed1c24', endColorstr='#aa1317');
+}
+.red:hover {
+	background: #b61318;
+	background: -webkit-gradient(linear, left top, left bottom, from(#c9151b), to(#a11115));
+	background: -moz-linear-gradient(top, #c9151b, #a11115);
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9151b', endColorstr='#a11115');
+	color: #fff;
+}
+.red:active {
+	color: #de898c;
+	background: -webkit-gradient(linear, left top, left bottom, from(#aa1317), to(#ed1c24));
+	background: -moz-linear-gradient(top, #aa1317, #ed1c24);
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#aa1317', endColorstr='#ed1c24');
+}
+.cor_bs, .cor_bs:hover {
+	color: #ffffff;
+}
+.mKeBanner, .mKeBanner div {
+	text-align: center;
+}
+/*弹出层 CSS*/
+.gb_resLay {
+	background: #FFFFFF;
+	height: 170px;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+.gb_resItms li {
+	float: left;
+}
+.gb_resA img {
+	height: auto;
+	width: 60px;
+	margin-bottom: 10px;
+}
+ @media only screen and (max-width: 500px) {
+.gb_resA img {
+	width: 45px;
+	margin-top: 5px;
+}
+}
+ @media only screen and (max-width: 470px) {
+.gb_resItms li {
+	width: 33.333%;
+}
+.gb_resLay {
+	height: 290px;
+}
+.gb_resA img {
+	width: 60px;
+	margin-top: 0
+}
+}
+
+.bdsharebuttonbox .bds_tsina {
+	background: url(../images/gbRes_1.png) no-repeat center center/60px 60px;
+}
+.bdsharebuttonbox .bds_qzone {
+	background: url(../images/gbRes_4.png) no-repeat center center/60px 60px;
+}
+.bdsharebuttonbox .bds_tqq {
+	background: url(../images/gbRes_5.png) no-repeat center center/60px 60px;
+}
+.bdsharebuttonbox .bds_weixin {
+	background: url(../images/gbRes_2.png) no-repeat center center/20px 20px;
+}
+.bdsharebuttonbox .bds_sqq {
+	background: url(../images/gbRes_3.png) no-repeat center center/20px 20px;
+}
+.bdsharebuttonbox .bds_renren {
+	background: url(../images/gbRes_1.png) no-repeat center center/60px 60px;
+}
+.bd_weixin_popup .bd_weixin_popup_foot {
+	position: relative;
+	top: -12px;
+}
+.bdsharebuttonbox{ float: right;}
+.bdsharebuttonbox ul li a { float:left; width:20px; height:20px; padding-left:0px;}
+
+
+

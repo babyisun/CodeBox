@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我是新意CPU</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <style>
+        .tc {
+            text-align: center;
+        }
+
+        p {
+            padding: 0 10px;
+        }
+
+        .ui-grid-a a img {
+            width: 90%;
+            height: 100px;
+        }
+
+        #view_3 .ui-grid-a a img {
+            width: 90%;
+            height: 160px;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div data-role="page" id="view_1" data-theme="a">
+    <header data-role="header" data-position="fixed">
+        <!--<a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>-->
+        <h1>我是新意CPU</h1>
+        <!--<a href="http://www.itbbb.com/" target="_blank" title="我的博客" data-role="button" data-icon="user" data-iconpos="notext"></a>-->
+    </header>
+    <article class="ui-grid-a">
+        <p class="tc">1.在CIG上班，你希望每天开什么车来？</p>
+        <div class="ui-block-a">
+            <a class="e_option" data-status="0" data-title="答错了！" data-content="宝宝买不起，宝宝不说~" href="#popupDialog"
+               data-rel="popup"
+               data-position-to="window" data-transition="pop" data-role="button"><img src="./img/asdmd.jpg"
+                                                                                       alt="阿斯顿马丁">
+                <p>A.阿斯顿马丁</p></a>
+        </div>
+        <div class="ui-block-b">
+            <a class="e_option" data-status="0" data-title="答错了！" data-content="我知道，你不喜欢飚车" href="#popupDialog"
+               data-rel="popup"
+               data-position-to="window" data-transition="pop" data-role="button"><img src="./img/lbjn.jpg" alt="兰博基尼">
+                <p>B.兰博基尼</p></a>
+        </div>
+        <div class="ui-block-a">
+            <a class="e_option" data-status="0" data-title="答错了！" data-content="那是郭美美的最爱" href="#popupDialog"
+               data-rel="popup"
+               data-position-to="window" data-transition="pop" data-role="button"><img src="./img/msld.jpg" alt="玛莎拉蒂">
+                <p>C.玛莎拉蒂</p></a>
+        </div>
+        <div class="ui-block-b">
+            <a class="e_option" data-status="1" data-title="机智如你！" data-content="小伙子，有前途，客户需求都火烧眉毛了，速去救火~"
+               href="#popupDialog"
+               data-rel="popup" data-position-to="window" data-transition="pop" data-role="button"><img
+                    src="./img/xfc.jpg" alt="救火车">
+                <p>D.救火车</p></a>
+        </div>
+    </article>
+    <!--<footer data-role="footer">-->
+    <!---->
+    <!--</footer>-->
+    <div data-role="popup" id="popupDialog" data-dismissible="false">
+        <div data-role="header">
+            <h1 class="d_title">答错了！</h1>
+        </div>
+        <div role="main" class="ui-content">
+             <h3 class="d_content ui-title">小伙子，有觉悟</h3>  
+             <a href="#" class="d_status0 e_ok ui-btn "
+                data-rel="back">确定</a>
+            <a href="#view_2" class="d_status1 ui-btn  hide">下一题</a>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="view_2" data-theme="a">
+    <header data-role="header" data-position="fixed">
+        <!--<a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>-->
+        <h1>我是新意CPU</h1>
+        <!--<a href="http://www.itbbb.com/" target="_blank" title="我的博客" data-role="button" data-icon="user" data-iconpos="notext"></a>-->
+    </header>
+    <article class="ui-grid-a">
+        <p class="tc">2.前端用户体验做的最出色的人是谁？</p>
+        <div class="ui-block-a">
+            <a class="e_option" data-status="0" data-title="答错了！" data-content="火星比较适合你~" href="#popupDialog2"
+               data-rel="popup"
+               data-position-to="window" data-transition="pop" data-role="button"><img src="./img/afd.jpg"
+                                                                                       alt="阿凡达">
+                <p>A.阿凡达</p></a>
+        </div>
+        <div class="ui-block-b">
+            <a class="e_option" data-status="0" data-title="答错了！" data-content="你TM在逗我吗？" href="#popupDialog2"
+               data-rel="popup"
+               data-position-to="window" data-transition="pop" data-role="button"><img src="./img/bfx.jpg" alt="蝙蝠侠">
+                <p>B.蝙蝠侠</p></a>
+        </div>
+        <div class="ui-block-a">
+            <a class="e_option" data-status="0" data-title="答错了！" data-content="靠谱点，他真的很忙..." href="#popupDialog2"
+               data-rel="popup"
+               data-position-to="window" data-transition="pop" data-role="button"><img src="./img/xjp.jpg" alt="习近平">
+                <p>C.习近平</p></a>
+        </div>
+        <div class="ui-block-b">
+            <a class="e_option" data-status="1" data-title="机智啊！" data-content="干(Sang)得(Xin)漂(Bing)亮(Kuang)"
+               href="#popupDialog2"
+               data-rel="popup" data-position-to="window" data-transition="pop" data-role="button"><img
+                    src="./img/sy.jpg" alt="我">
+                <p>D.石阳</p></a>
+        </div>
+    </article>
+    <div data-role="popup" id="popupDialog2" data-dismissible="false">
+        <div data-role="header">
+            <h1 class="d_title">答错了！</h1>
+        </div>
+        <div role="main" class="ui-content">
+             <h3 class="d_content ui-title">小伙子，有觉悟</h3>  
+             <a href="#" class="d_status0 e_ok ui-btn "
+                data-rel="back">确定</a>
+            <a href="#view_3" class="d_status1 ui-btn hide">下一题</a>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="view_3" data-theme="a">
+    <header data-role="header" data-position="fixed">
+        <!--<a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>-->
+        <h1>我是新意CPU</h1>
+        <!--<a href="http://www.itbbb.com/" target="_blank" title="我的博客" data-role="button" data-icon="user" data-iconpos="notext"></a>-->
+    </header>
+    <article class="ui-grid-a">
+        <p class="tc">3.请从以下人中选出新意CPU</p>
+        <div class="ui-block-a">
+            <a class="e_option" data-status="0" data-title="答错了！" data-content="你这么淘气CEO知道么？" href="#popupDialog3"
+               data-rel="popup"
+               data-position-to="window" data-transition="pop" data-role="button"><img src="./img/bin.jpg"
+                                                                                       alt="李斌">
+                <p>A.李斌</p></a>
+        </div>
+        <div class="ui-block-b">
+            <a class="e_option" data-status="0" data-title="答错了！" data-content="他级别太高，没资格" href="#popupDialog3"
+               data-rel="popup"
+               data-position-to="window" data-transition="pop" data-role="button"><img src="./img/Dragon.jpg" alt="曲伟海">
+                <p>B.曲伟海</p></a>
+        </div>
+        <div class="ui-block-a">
+            <a class="e_option" data-status="0" data-title="答错了！" data-content="能不能愉快的玩耍？" href="#popupDialog3"
+               data-rel="popup"
+               data-position-to="window" data-transition="pop" data-role="button"><img src="./img/Johnson.jpg"
+                                                                                       alt="朱劲松">
+                <p>C.朱劲松</p></a>
+        </div>
+        <div class="ui-block-b">
+            <a class="e_option" data-status="1" data-title="悟性高！" data-content="感谢支持，记得给我投票"
+               href="#popupDialog3"
+               data-rel="popup" data-position-to="window" data-transition="pop" data-role="button"><img
+                    src="./img/sy1.jpg" alt="我">
+                <p>D.石阳</p></a>
+        </div>
+    </article>
+    <div data-role="popup" id="popupDialog3" data-dismissible="false">
+        <div data-role="header">
+            <h1 class="d_title">答错了！</h1>
+        </div>
+        <div role="main" class="ui-content">
+             <h3 class="d_content ui-title">小伙子，有觉悟</h3>  
+             <a href="#" class="d_status0 e_ok ui-btn"
+                data-rel="back">确定</a>
+            <a href="#view_4" class="d_status1 ui-btn hide">Game Over</a>
+        </div>
+    </div>
+</div>
+<div data-role="page" id="view_4" data-theme="a">
+    <header data-role="header" data-position="fixed">
+        <h1>我是新意CPU</h1>
+    </header>
+    <article>
+        <p>本故事纯属娱乐，请顺手分享给其它同事，如果不小心被老板知道了，<b>那</b>（你）<b>就</b>（来）<b>完</b>（打）<b>蛋</b>（我）<b>了</b>（啊）！</p>
+        <p>我已使出洪荒之力，如果觉得有意思，记得给我投一票</p>
+        <div class="tc"><img src="./img/doubi.jpg" alt=""></div>
+    </article>
+    <footer data-role="footer">
+        <h1>
+            <a id="e_replay" href="#view_1" data-role="button">再high一次</a>
+        </h1>
+    </footer>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<!--<script src="js/extension.js"></script>-->
+<script type="text/javascript">
+    $(function () {
+        $.fn.extend({
+            animateCss: function (animationName, callback) {
+                var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+                var _this = $(this);
+                _this.addClass('animated ' + animationName).one(animationEnd, function () {
+                    _this.removeClass('animated ' + animationName);
+                    if (callback) {
+                        callback(_this);
+                    }
+                    _this.hide();
+                });
+            }
+        });
+
+        var hideArr = ["flipOutY", "zoomOutDown", "slideOutDown", "hinge", "rollOut", "bounceOutLeft"];
+
+        var d_title = $(".d_title"),
+                d_content = $(".d_content"),
+                currDom = null,
+                currStatus = "0";
+
+        $(".e_option").click(function () {
+            var _this = $(this), title = _this.data("title"),
+                    content = _this.data("content"), status = _this.data("status");
+            d_title.html(title);
+            d_content.html(content);
+            currDom = _this.parent();
+            currStatus = status;
+            if (+currStatus) {
+                $(".d_status0").addClass("hide");//.hide();
+                $(".d_status1").removeClass("hide");//.show();
+            } else {
+                $(".d_status0").removeClass("hide");//.show();
+                $(".d_status1").addClass("hide");//.hide();
+            }
+        });
+
+        $(".e_ok").click(function (e) {
+            var ani = hideArr[Math.floor(Math.random() * hideArr.length)];
+            currDom.animateCss(ani);
+        });
+
+        $("#e_replay").click(function () {
+            $('div[class^="ui-block"]').show();
+        })
+
+    });
+</script>
+<div style="display: none;">
+<script src="http://s23.cnzz.com/stat.php?id=5816290&web_id=5816290" language="JavaScript"></script>
+</div>
+</body>
+</html>

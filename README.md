@@ -1,13 +1,10 @@
 # 自建代码案例库
 ## 插件积累
-### mark语法研习
-#### 四个有效？
 
 This is the **simplest** and **slickest** Markdown editor. 
-Just write Markdown and see what it looks like as you type. And convert it to HTML in one click.
+在这收集日常代码
 
 ## Getting started
-
 ### How?
 
 Just start typing in the left panel.
@@ -20,7 +17,6 @@ Just start typing in the left panel.
 ### Most useful shortcuts
 
 - `CTRL + O` to open files
-- `CTRL + T` to open a new tab
 - `CTRL + S` to save the current file or tab
 
 ### Privacy
@@ -28,3 +24,6 @@ Just start typing in the left panel.
 - No data is sent to any server – everything you type stays inside your application
 - The editor automatically saves what you write locally for future use.  
   If using a public computer, close all tabs before leaving the editor
+  
+### 语法
+技术易学，思维难变

@@ -1,0 +1,30 @@
+@import '../core/color.scss';
+
+html {
+  height: 100%;
+}
+
+body {
+  background: url(../../images/body-bg.jpg) center top no-repeat $body-bg;
+  background-size: cover;
+  overflow: hidden;
+  height: 100%;
+  font-family: '微软雅黑';
+}
+
+li {
+  list-style: none;
+}
+
+em {
+  font-style: normal;
+}
+
+span {
+  display: inline-block;
+}
+
+i {
+  font-style: normal;
+}
+

@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scrum估算扑克-Planning poker</title>
+    <meta name="keywords" content="估算扑克,Planning poker,Scrum扑克牌,在线估算扑克牌" />
+    <meta name="description" content="Scrum在线估算扑克" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <style type="text/css">
+    .e_num {
+        font-size: 28px;
+        color: red;
+    }
+    
+    .open {
+        min-height: 250px;
+        height: 250px;
+        line-height: 250px;
+        font-size: 72px;
+        text-align: center;
+    }
+    
+    .openbig a {
+        font-size: 150px;
+        min-height: 400px;
+        height: 400px;
+        line-height: 400px;
+        color: #000;
+        font-weight: bold;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    </style>
+    
+</head>
+
+<body>
+    <div data-role="page" id="view_1" data-theme="a">
+        <header data-role="header" data-position="fixed">
+            <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+            <h1>计划扑克</h1>
+            <a href="http://www.itbbb.com/" target="_blank" title="我的博客" data-role="button" data-icon="user" data-iconpos="notext"></a>
+        </header>
+        <article class="ui-grid-b e_poker">
+            <div class="ui-block-a">
+                <a href="#" data-role="button" class="ui-btn-active">？</a>
+            </div>
+            <div class="ui-block-b">
+                <a href="#" data-role="button">0.5</a>
+            </div>
+            <div class="ui-block-c">
+                <a href="#" data-role="button">1</a>
+            </div>
+            <div class="ui-block-a">
+                <a href="#" data-role="button">2</a>
+            </div>
+            <div class="ui-block-b">
+                <a href="#" data-role="button">3</a>
+            </div>
+            <div class="ui-block-c">
+                <a href="#" data-role="button">5</a>
+            </div>
+            <div class="ui-block-a">
+                <a href="#" data-role="button">8</a>
+            </div>
+            <div class="ui-block-b">
+                <a href="#" data-role="button">13</a>
+            </div>
+            <div class="ui-block-c">
+                <a href="#" data-role="button">20</a>
+            </div>
+            <div class="ui-block-a">
+                <a href="#" data-role="button">40</a>
+            </div>
+            <div class="ui-block-b">
+                <a href="#" data-role="button">100</a>
+            </div>
+            <div class="ui-block-c">
+                <a href="#" data-role="button">咖啡</a>
+            </div>
+        </article>
+        <footer data-role="footer">
+            <h1>我将要出：<b class="e_num">0</b></h1>
+            <h1><a href="#view_2" data-role="button" data-theme="b">下定离手</a>
+                <a class="e_clear" href="javascript:;" data-role="button" data-theme="b">我要反悔</a>
+            </h1>
+        </footer>
+    </div>
+    <div data-role="page" id="view_2" data-theme="a">
+        <header data-role="header" data-position="fixed">
+            <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+            <h1>计划扑克</h1>
+            <a href="http://www.itbbb.com/" target="_blank" title="我的博客" data-role="button" data-icon="user" data-iconpos="notext"></a>
+        </header>
+        <article>
+            <a href="#view_3" data-role="button" class="open">开牌</a>
+        </article>
+        <footer data-role="footer">
+            <h1>
+                <a href="#view_1" data-role="button" data-theme="b">重新选择</a>
+            </h1>
+        </footer>
+    </div>
+    <div data-role="page" id="view_3" data-theme="a">
+        <header data-role="header" data-position="fixed">
+            <a href="#" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+            <h1>计划扑克</h1>
+            <a href="http://www.itbbb.com/" target="_blank" title="我的博客" data-role="button" data-icon="user" data-iconpos="notext"></a>
+        </header>
+        <article>
+            <div class="openbig"><a class="e_clear e_num" href="#view_1">0</a></div>
+        </article>
+        <footer data-role="footer">
+            <h1>
+                <a class="e_clear" href="#view_1" data-role="button" data-theme="b">进入下一轮</a>
+            </h1>
+        </footer>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var poker = $(".e_poker a"),
+            num = $(".e_num"),
+            clear_btn = $(".e_clear");
+        var add = function() {
+            poker.first().removeClass('ui-btn-active');
+            poker.last().removeClass('ui-btn-active');
+            var sum = 0;
+            poker.filter('.ui-btn-active').each(function() {
+                var _this = $(this),
+                    val = parseFloat(_this.html());
+                if (val)
+                    sum += val;
+            });
+            num.html(sum);
+        };
+
+        var clearAll = function(obj) {
+            poker.removeClass('ui-btn-active');
+            num.html(obj.html());
+            obj.addClass('ui-btn-active'); //.siblings().removeClass('ui-btn-active');
+        };
+
+        poker.click(function() {
+            var _this = $(this),
+                _val = _this.html();
+            if (_this.hasClass('ui-btn-active'))
+                _this.removeClass('ui-btn-active');
+            else
+                _this.addClass('ui-btn-active');
+            if (_val == "？" || _val == "咖啡")
+                clearAll(_this);
+            else
+                add();
+        });
+
+        clear_btn.click(function() {
+            poker.removeClass('ui-btn-active');
+            num.html(0);
+        });
+    });
+    </script>
+    <div style="display: none;">
+        <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F665ed821ce0c947e5ccb95d1dbed69a8' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script src="http://s23.cnzz.com/stat.php?id=5816290&web_id=5816290" language="JavaScript"></script>
+    </div>
+</body>
+
+</html>

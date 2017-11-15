@@ -1,8 +1,9 @@
 /*
+ * name     : ReactNative下自定义拉刷新组件
  * source   : LetsPullRefresh.js
- * version  : beta 1.0
+ * version  : beta 1.0.0
  * depends  : image/arrow.png & loading.png
- * Download : https://github.com/babyisun/CodeBox/RN/
+ * Download : https://github.com/babyisun/CodeBox/tree/master/RN/Plugin
  *
  * author   : North
  * blog     : http://www.itbbb.com
@@ -13,11 +14,12 @@
  * create   : 2017/11/14
  * update   : 2017/11/15
  * 
- * example  : <LetsPullRefresh onRefresh={this._onRefresh}>
+ * example  : <LetsPullRefresh onRefresh={this._onRefresh}
+               backgroundColor="white"
+               color="#666">
                 ...
               </LetsPullRefresh>
  *
- * message  : 如果发现任何bug、需要完善的代码，请发邮件或通过微信联系我，我很高兴与大家一起整理优雅的代码.
  **/
 'use strict'
 
@@ -92,6 +94,14 @@ export default class LetsPullRefresh extends Component {
             showPullLastTime: 'NONE',
             rotateValue: new Animated.Value(0)
         };
+    }
+
+    //可配置属性
+    static defaultProps = {
+        //默认背景颜色
+        backgroundColor: "white",
+        //默认文字颜色
+        color: "#666"
     }
 
     //要求成为响应者
@@ -246,10 +256,7 @@ export default class LetsPullRefresh extends Component {
         self.setState({
             showPullLastTime: savedDate,
         });
-        AsyncStorage.setItem(CONFIG.REFRESH_LAST_TIME_KEY, savedDate, () => {
-
-        });
-        //this.resetHeader();
+        AsyncStorage.setItem(CONFIG.REFRESH_LAST_TIME_KEY, savedDate);
     }
 
     componentDidMount() {
@@ -319,16 +326,17 @@ export default class LetsPullRefresh extends Component {
                 resizeMode={Image.resizeMode.contain} />
             pullText = CONFIG.ShowLoadingStatusText.SHOW_LOADING;
         }
+        const { backgroundColor, color } = this.props;
         return (
             <View style={styles.base}>
                 <View ref={CONFIG.PULL_REFRESH_LAYOUT}
                     {...this._panResponder.panHandlers} >
-                    <View style={styles.container}>
+                    <View style={[styles.container, { backgroundColor: backgroundColor }]}>
                         <View style={styles.area}>
                             {indicatorView}
                             <View style={styles.main}>
-                                <Text style={[styles.font, { marginTop: 2,marginBottom: 2 }]}>{pullText}</Text>
-                                <Text style={[styles.font, { marginTop: 2 }]}>最后更新:   {this.state.showPullLastTime}</Text>
+                                <Text style={[styles.font, { marginTop: 2, marginBottom: 2, color: color }]}>{pullText}</Text>
+                                <Text style={[styles.font, { marginTop: 2 , color: color}]}>最后更新:   {this.state.showPullLastTime}</Text>
                             </View>
                         </View>
                     </View>
@@ -346,7 +354,7 @@ var styles = StyleSheet.create({
     container: {
         backgroundColor: 'white',
         position: 'absolute',
-        marginTop: -CONFIG.REFRESH_PULL_LENGTH//-50
+        marginTop: -CONFIG.REFRESH_PULL_LENGTH,
     },
     area: {
         justifyContent: 'center', alignItems: 'center',
@@ -360,7 +368,7 @@ var styles = StyleSheet.create({
         fontSize: 12, color: '#666'
     },
     iconArea: {
-        height: 30, width: 30, marginRight: 10,marginLeft:-30
+        height: 30, width: 30, marginRight: 10, marginLeft: -30
     },
     arrowDown: {
         transform: [{ rotate: "180deg" }]

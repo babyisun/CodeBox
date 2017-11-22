@@ -10,7 +10,6 @@
 <script type="text/javascript" src="../js/icallcenter/global.js"></script>
 <script type="text/javascript" src="../hojo/hojo.js" djConfig="isDebug:false, parseOnLoad:false"></script>
 <script type="text/javascript">
-
 hojo.registerModulePath("icallcenter", "../js/icallcenter");
 hojo.require("icallcenter.logon");
 hojo.require("hojo.io.script");
@@ -18,11 +17,7 @@ hojo.require("hojo.io.script");
 hojo.addOnLoad(function () {
     var loginName = icallcenter.logon.getUrlValue("loginName");
     var password = icallcenter.logon.getUrlValue("password");
-    var extenType = icallcenter.logon.getUrlValue("loginType");
-//    var loginName = "6000@proxy2test3";
-//    var password = "6000";
-//    var extenType = "gateway";//Local
-
+    var loginType = icallcenter.logon.getUrlValue("loginType");
     icallcenter.logon.startLogon(loginName, password, extenType);
 });
 
@@ -64,7 +59,7 @@ hojo.addOnWindowUnload(function (){
 			
 			<a href="#" class="ThreeWayCallEnable" id="ConsultThreeWayCallEnable" style="display: none" onclick="javascript:phone.threeWayCall('912345')"></a> 
 			<a href="#" class="ThreeWayCallDisable" id="ConsultThreeWayCallDisable" style="display: none"></a>
-
+			
 		</div>
 		<div class="barBox" id="peerStatus">
 			<div class="clear10">&nbsp;</div>
@@ -76,11 +71,8 @@ hojo.addOnWindowUnload(function (){
 			<a href="#" id="BusyEnable" class="BusyEnable" style="display: none"></a>
 			<a href="#" onclick="javascript:phone.setBusy(true,'1')" id="BusyDisable" class="BusyDisable" ></a>
 		</div>
-		<div id="memo_info_div"></div>
-
 	</div>
 	<div id="netMessage"></div>
 	<iframe id="icallcenter.iframe" style="display: none"></iframe>
-
 </body>
 </html>

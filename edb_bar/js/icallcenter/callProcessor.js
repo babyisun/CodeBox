@@ -37,10 +37,19 @@ hojo.declare("icallcenter.callProcessor", null, {
 		var endTime= "";
 		var monitorFilename= "";
 		hojo.byId("icallcenter.dialout.input").value = callNo;
+		var str = "";
+		if(data.callerProvince && data.callerCity){
+			str += "来电归属地："+data.callerProvince + "   " + data.callerCity;
+		}
+		if(data.callType == 'transfer'){
+			str += "转接来电来自座席：" + data.data.Agent;
+		}
+		hojo.byId("memo_info_div").innerHTML = str;
 		alert("agent:" + agent +";callNo:" + callNo+";calledNo:"+calledNo+";callType:"+callType+";status:"+status+";ringTime:"+ringTime+";beginTime:"+beginTime+";endTime:"+endTime+";monitorFilename:"+monitorFilename);
     },
     
     onHangup: function(data) {
+		hojo.byId("memo_info_div").innerHTML = "";
         console.info("onHangup=============")
 		console.log(data);
 		var callsheetId = data.callSheetId;

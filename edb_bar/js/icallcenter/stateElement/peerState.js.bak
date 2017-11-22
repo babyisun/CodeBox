@@ -8,7 +8,11 @@ hojo.declare("icallcenter.stateElement.peerState", null, {
 		if(this._states == '') {
 			  var self = this;
 			  hojo.forEach(self._base._phone.PhonebarConfig.split(","), function(items) {
-				   self._put(items.split(":")[0],items.split(":")[1]);
+				    if(items.split(":")[0] == '0') {
+						alert("11");
+						self._put(items.split(":")[0], "在线");	
+					} else 
+					  	self._put(items.split(":")[0],items.split(":")[1]);
 	          });
 		}
 
@@ -74,14 +78,6 @@ hojo.declare("icallcenter.stateElement.peerState", null, {
 					}
 				}
 			}
-		} else if(evtJson.Event == "IvrMenuEnd"){
-			hojo.publish("ivrMenuTransfering", [evtJson]);
-		} else if(evtJson.Event == "TransferSuccess" || evtJson.Event == "TransferFailed") {
-			evtJson.Type = "Transfer";
-			if(evtJson.Investigate) {
-				evtJson.Type = "Investigate";
-			}
-			hojo.publish("transfering", [evtJson]);
 		}
 		
 	},

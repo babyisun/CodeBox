@@ -232,7 +232,7 @@ hojo.declare("icallcenter.stateElement.base", null , {
 	     	                        agent: evtJson.Data.Agent,
   	           				 		status: "notDeal",
   	           				 		beginTime: "",
-            	                    endTime: ""
+            	                   endTime: ""
 	     	                    };
     	     	                if (linkedChannel.Data) {
     	     	                    //console.debug("当前振铃的同步数据");
@@ -244,11 +244,11 @@ hojo.declare("icallcenter.stateElement.base", null , {
 	     	                    hojo.publish("EvtRing", [this._phone.callObject]);
 						}
 					}
-					if(evtJson.LinkedChannel.ChannelType == "normal") {
+					if(evtJson.LinkedChannel.ChannelType == "normal" ||
+						evtJson.LinkedChannel.ChannelType=="inner") {
 						if (evtJson.Link) {
 							 var linkedChannel = evtJson.LinkedChannel;
-                             console.info("_setCallObject============")
-	            	         console.dir(linkedChannel);
+	            	         //console.dir(linkedChannel);
 	            	         if(this._phone._callId != linkedChannel.Uniqueid) {
 	            	        	 this._phone._callId = linkedChannel.Uniqueid;
 	   	           				 var callsheetid = "";
@@ -271,10 +271,6 @@ hojo.declare("icallcenter.stateElement.base", null , {
             	                        beginTime: "",
             	                        endTime: "",
             	                        agent: evtJson.Data.Agent,
-                                        ivrkey: linkedChannel.Data.IVRKEY,
-                                        callerCity: linkedChannel.CallerCity,
-                                        callerProvince: linkedChannel.CallerProvince,
-                                        queueName: linkedChannel.QueueName,
   	           				 			status: "notDeal"
             	                 };
 		   	           			 if (linkedChannel.Data) {
@@ -335,8 +331,6 @@ hojo.declare("icallcenter.stateElement.base", null , {
 					this._phone._curChannel = evtJson.Channel;
 					this._phone._callId = "";
 	    		} else if(evtJson.ChannelStatus == "Hangup") {
-                    console.info("Hangup============")
-                    console.dir(evtJson);
 	    			this._phone._curChannel = evtJson.Channel;
 	    			this._phone._callId = "";
 	    			//console.debug("挂机事件到达，对应的通道号: [%s], 当前状态: [%s]",evtJson.Channel, evtJson.C5Status);
@@ -344,7 +338,7 @@ hojo.declare("icallcenter.stateElement.base", null , {
 	        			if (evtJson.ChannelType == "normal" || evtJson.ChannelType == "dialout"
 	                      	 || evtJson.ChannelType == "dialTransfer"
 	                      	 || evtJson.ChannelType == "transfer"
-	                      	 || evtJson.ChannelType == "webcall" || evtJson.ChannelType == "inner") {
+	                      	 || evtJson.ChannelType == "webcall") {
 	                        this._phone.callObject.endTime = icallcenter.hojotools.dateParse(new Date(evtJson.Timestamp * 1000));
 	                        this._phone.callObject.ringTime = icallcenter.hojotools.dateParse(new Date(evtJson.Data.RingTime * 1000));
 	                        
@@ -388,17 +382,17 @@ hojo.declare("icallcenter.stateElement.base", null , {
     			this._updateQueueInfo();
     		} else if(evtJson.ChannelStatus == "Ring") {
     			peer.callStatus = "Ring";
-                peer.called = false;
-                peer.C5Status = evtJson.C5Status;
-                peer.timestamp = evtJson.Timestamp;
-                peer.channel = evtJson.Channel;
-                if(evtJson.C5Status == "OutboundCall"
-                    || evtJson.C5Status == "InboundCall"
-                    || evtJson.C5Status == "listen"){
-                    peer.callNo = evtJson.Data.ListenExten;
-                } else if(evtJson.FromDid)
-                    peer.callNo = evtJson.FromDid;
-                hojo.publish("EvtMonitorPeer",[peer]);
+    			peer.called = false;
+    			peer.C5Status = evtJson.C5Status;
+    			peer.timestamp = evtJson.Timestamp;
+    			peer.channel = evtJson.Channel;
+    			if(evtJson.C5Status == "OutboundCall"
+    				|| evtJson.C5Status == "InboundCall"
+    				|| evtJson.C5Status == "listen"){
+    				peer.callNo = evtJson.Data.ListenExten;
+    			} else if(evtJson.FromDid) 
+    				peer.callNo = evtJson.FromDid;
+    			hojo.publish("EvtMonitorPeer",[peer]);
     		} else if(evtJson.ChannelStatus == "Ringing"){
     			peer.called = true;
     			peer.callStatus = "Ringing";

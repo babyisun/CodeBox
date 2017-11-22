@@ -123,7 +123,7 @@ a.HoldEnable {
 	width:73px;
 	float:left;
     height:29px;
-    margin-left:5px;
+    margin-left:15px;
 	display:block;
 	background-image: url(../imgs/holdEnable.png);
 	background-position: 0px 0px;	
@@ -140,7 +140,7 @@ a.HoldDisable {
 	width:73px;
 	float:left;
     height:29px;
-    margin-left:5px;
+    margin-left:15px;
 	display:block;
 	background-image: url(../imgs/holdDisable.png);
 	background-repeat:no-repeat;
@@ -152,7 +152,7 @@ a.HoldGetEnable {
 	width:74px;
 	float:left;
     height:29px;
-    margin-left:5px;
+    margin-left:15px;
 	display:block;
 	background-image: url(../imgs/holdGetEnable.png);
 	background-position: 0px 0px;	
@@ -169,7 +169,7 @@ a.TransferEnable {
 	width:73px;
 	float:left;
     height:29px;
-    margin-left:15px;
+    margin-left:5px;
 	display:block;
 	background-image: url(../imgs/transferEnable.png);
 	background-position: 0px 0px;	
@@ -186,7 +186,7 @@ a.TransferDisable {
 	width:73px;
 	float:left;
     height:29px;
-    margin-left:15px;
+    margin-left:5px;
 	display:block;
 	background-image: url(../imgs/transferDisable.png);
 	background-repeat:no-repeat;
@@ -198,7 +198,7 @@ a.ConsultEnable {
 	width:74px;
 	float:left;
     height:29px;
-    margin-left:5px;
+    margin-left:15px;
 	display:block;
 	background-image: url(../imgs/consultEnable.png);
 	background-position: 0px 0px;	
@@ -215,7 +215,7 @@ a.ConsultDisable {
 	width:74px;
 	float:left;
     height:29px;
-    margin-left:5px;
+    margin-left:15px;
 	display:block;
 	background-image: url(../imgs/consultDisable.png);
 	background-repeat:no-repeat;
@@ -227,7 +227,7 @@ a.StopConsultEnable {
 	width:74px;
 	float:left;
     height:29px;
-    margin-left:5px;
+    margin-left:15px;
 	display:block;
 	background-image: url(../imgs/stopConsultEnable.png);
 	background-position: 0px 0px;	

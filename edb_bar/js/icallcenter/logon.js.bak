@@ -1,15 +1,15 @@
 ﻿hojo.provide("icallcenter.logon");
 
 icallcenter.logon.startLogon = function (loginName, password, extenType) {
-    var config = {
-        Monitor: false,
-        proxy_url: "http://121.40.230.165",
-        extenType: extenType || "sip",
-        password: password || "8000",
-        User: loginName || "8000@bjxyhd",
-        busyType: "0"
+	var config = {
+        Monitor: true,
+        proxy_url: "http://119.254.80.104",
+        extenType: extenType,
+        password: password,
+		User: loginName,
+		busyType: "0"
     };
-    icallcenter.logon.initPhone(config);
+	icallcenter.logon.initPhone(config);
 };
 
 //init softphone

@@ -22,7 +22,7 @@
                         var t = temp.list[j];
                         if (t && t.video) {
                             //console.log(t.video.highWatchUrl);
-                            output.push(t.video.highWatchUrl);
+                            output.push(t.video.highWatchUrl || t.video.watchUrl);
                         }
                     }
                     //}
@@ -34,7 +34,7 @@
             }
         }
 
-        getList(math, "2014年1月");
+        getList(english, "2014年1月");
     </script>
 </body>
 

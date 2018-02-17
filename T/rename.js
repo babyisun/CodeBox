@@ -18,7 +18,8 @@ var renameList = function (data, key, dir) {
                         kv.t = "[" + ptitle + "]" + t.title;
                     }
                     if (t && t.video) {
-                        var path = t.video.highWatchUrl.split("\/"),
+                        var url = t.video.highWatchUrl || t.video.watchUrl;
+                        var path = url.split("\/"),
                             filename = path[path.length - 1];
                         //console.log(path.length);
                         kv.v = filename;
@@ -47,5 +48,5 @@ var renameList = function (data, key, dir) {
     }
 }
 
-renameList(data.math, "2014年1月", "./");
+renameList(data.math, "2014年1月", "../");
 

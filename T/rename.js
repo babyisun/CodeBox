@@ -19,10 +19,12 @@ var renameList = function (data, key, dir) {
                     }
                     if (t && t.video) {
                         var url = t.video.highWatchUrl || t.video.watchUrl;
-                        var path = url.split("\/"),
-                            filename = path[path.length - 1];
-                        //console.log(path.length);
-                        kv.v = filename;
+                        if (url) {
+                            var path = url.split("\/"),
+                                filename = path[path.length - 1];
+                            //console.log(path.length);
+                            kv.v = filename;
+                        }
                     }
                     output.push(kv);
                 }
@@ -30,8 +32,8 @@ var renameList = function (data, key, dir) {
             //}
         }
 
-        console.log(output);
-        return;
+        // console.log(output);
+        // return;
 
         if (output.length) {
             for (var i = 0; i < output.length; i++) {
@@ -48,5 +50,5 @@ var renameList = function (data, key, dir) {
     }
 }
 
-renameList(data.math, "2014年1月", "../");
+renameList(data.logic, "", "../");
 

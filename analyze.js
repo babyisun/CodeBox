@@ -1,5 +1,6 @@
 ﻿//only use to current version 绩效分析
-var finished = location.href.indexOf("gettoseeperf") > 0, _dom = finished ? $(".tablebox:eq(1)") : $("#perf_table");
+var _href=location.href;
+var finished = _href.indexOf("gettoseeperf") > 0||_href.indexOf("toperfdetails") > 0, _dom = finished ? $(".tablebox:eq(1)") : $("#perf_table");
 var KPI_Action = function (finished) {
     try {
         var total = 0;

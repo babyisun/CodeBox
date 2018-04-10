@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <textarea name="" id="ti" cols="150" rows="10" width="100%"></textarea>
     <script src="data.js"></script>
     <script>
         var getList = function (data, key) {
@@ -16,23 +17,24 @@
                 var output = [];
                 for (var i = 0; i < data.data.list.length; i++) {
                     var temp = data.data.list[i];
-                    if (temp && temp.title.indexOf(key) >= 0) {
-                        for (var j = 0; j < temp.list.length; j++) {
-                            var t = temp.list[j];
-                            if (t && t.video) {
-                                //console.log(t.video.highWatchUrl);
-                                output.push(t.video.highWatchUrl);
-                            }
+                    //if (temp && temp.title.indexOf(key) >= 0) {
+                    for (var j = 0; j < temp.list.length; j++) {
+                        var t = temp.list[j];
+                        if (t && t.video) {
+                            //console.log(t.video.highWatchUrl);
+                            output.push(t.video.highWatchUrl || t.video.watchUrl);
                         }
                     }
+                    //}
                 }
                 var str = output.join("\n");
-                document.write(str);
+                //document.write(str);
+                document.getElementById("ti").value = str;
                 console.log(str);
             }
         }
 
-        getList(math, "2014年1月");
+        getList(writing, "2014年1月");
     </script>
 </body>
 

@@ -8,26 +8,33 @@ var renameList = function (data, key, dir) {
     if (data && data.data && data.data.list) {
         var output = [];
         for (var i = 0; i < data.data.list.length; i++) {
-            var temp = data.data.list[i];
-            if (temp && temp.title.indexOf(key) >= 0) {
-                for (var j = 0; j < temp.list.length; j++) {
-                    var t = temp.list[j];
-                    if (t) {
-                        var kv = {};
-                        if (t.title) {
-                            kv.t = key + t.title;
-                        }
-                        if (t && t.video) {
-                            var path = t.video.highWatchUrl.split("\/"),
+            var temp = data.data.list[i], ptitle = temp.title;
+            //if (temp && temp.title.indexOf(key) >= 0) {
+            for (var j = 0; j < temp.list.length; j++) {
+                var t = temp.list[j];
+                if (t) {
+                    var kv = {};
+                    if (t.title) {
+                        kv.t = "[" + ptitle + "]" + t.title;
+                    }
+                    if (t && t.video) {
+                        var url = t.video.highWatchUrl || t.video.watchUrl;
+                        if (url) {
+                            var path = url.split("\/"),
                                 filename = path[path.length - 1];
                             //console.log(path.length);
                             kv.v = filename;
                         }
-                        output.push(kv);
                     }
+                    output.push(kv);
                 }
             }
+            //}
         }
+
+        // console.log(output);
+        // return;
+
         if (output.length) {
             for (var i = 0; i < output.length; i++) {
                 var temp = output[i];
@@ -43,5 +50,5 @@ var renameList = function (data, key, dir) {
     }
 }
 
-renameList(data.math, "2014年1月", "2014/");
+renameList(data.logic, "", "../");
 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var a = {
+        val: 1, item: [
+            { val: 1 },
+            { val: 1, item: [{ val: 1, item: [{ val: 2 }] }] }
+        ]
+    };
+    var T = function (obj) {
+        var temp = obj.val || 0;
+        if (obj.item && obj.item instanceof Array && obj.item.length) {
+            for (var i = 0; i < obj.item.length; i++) {
+                var o = obj.item[i];
+                if (o.item) {
+                    temp += T(o);
+                } else {
+                    temp += o.val;
+                }
+            }
+        }
+        return temp;
+    }
+    console.log(T(a));
+</script>
+
+</html>

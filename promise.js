@@ -19,4 +19,20 @@ let p = new Promise((resolve, reject) => {
     return "错误";
 }).then(value => {
     console.log(value + " north");
+    // throw new Error("error");
+}).catch(err => {
+    console.log(err);
 })
+
+// Define the callback function.
+const appendCurrent = (previousValue, currentValue) => {
+    return previousValue + "::" + currentValue;
+}
+
+// Create an array.
+const elements = ["abc", "def", 123, 456];
+
+// Call the reduce method, which calls the callback function
+// for each array element.
+let result = elements.reduce(appendCurrent);
+console.log(result);

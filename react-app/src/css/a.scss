@@ -1,0 +1,16 @@
+@import "./font/iconfont.css";
+body {
+    background: #ccc;
+    .App {
+        color: red;
+        .App-intro {
+            code {
+                background: url('../Dollar.png') no-repeat center center;
+            }
+        }
+    }
+    h1 {
+        //background: green;
+        background: url('../Dollar.png') no-repeat center center;
+    }
+}
